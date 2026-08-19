@@ -1,0 +1,97 @@
+import Image from "next/image";
+import diamondImg from "../../public/images/asset-diamond.png";
+import platinumImg from "../../public/images/asset-platinum.png";
+import watchImg from "../../public/images/asset-watch.png";
+import sectionVector from "../../public/images/section-vector.png";
+
+const ASSETS = [
+  {
+    image: diamondImg,
+    name: "Diamonds",
+    description:
+      "Loose diamonds and diamond jewellery assessed through a careful review of quality, authenticity and documentation.",
+    price: "₹420,000",
+    change: "+2.4% Est.",
+  },
+  {
+    image: platinumImg,
+    name: "Platinum Jewellery",
+    description:
+      "Platinum pieces assessed for their traits and worth, free from original jeweller restrictions.",
+    price: "₹115,000",
+    change: "+1.8% Est.",
+  },
+  {
+    image: watchImg,
+    name: "Luxury Watches",
+    description:
+      "Exceptional timepieces evaluated for authenticity, condition, documentation, and market demand.",
+    price: "₹88,500",
+    change: "+0.9% Est.",
+  },
+];
+
+export default function Assets() {
+  return (
+    <section id="assets" className="relative py-20 lg:py-28">
+      <Image
+        src={sectionVector}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute -top-40 right-0 -z-10 w-375 max-w-none opacity-40 select-none lg:-top-56 lg:w-[1900px]"
+      />
+
+      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+        <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
+          <div>
+            <p className="text-xs font-bold tracking-[1.2px] text-gold uppercase">
+              Selected Categories
+            </p>
+            <h2 className="mt-3 font-display text-4xl font-bold text-text-primary sm:text-5xl">
+              Assets We Evaluate
+            </h2>
+          </div>
+          <a
+            href="#contact"
+            className="text-[15px] font-bold tracking-[1.2px] text-gold uppercase"
+          >
+            Explore Eligible Assets
+          </a>
+        </div>
+
+        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {ASSETS.map((asset) => (
+            <div key={asset.name} className="flex flex-col gap-6">
+              <div className="overflow-hidden rounded-2xl">
+                <Image
+                  src={asset.image}
+                  alt={asset.name}
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  className="h-auto w-full object-cover"
+                />
+              </div>
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <h3 className="text-[28px] leading-[36.4px] font-medium text-text-primary">
+                    {asset.name}
+                  </h3>
+                  <p className="mt-1 max-w-xs text-base leading-6 text-text-mutedmore">
+                    {asset.description}
+                  </p>
+                </div>
+                <div className="shrink-0 text-right">
+                  <p className="text-xl font-medium tracking-[0.4px] text-gold">
+                    {asset.price}
+                  </p>
+                  <p className="mt-1 text-[10px] tracking-[1px] text-positive">
+                    {asset.change}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
