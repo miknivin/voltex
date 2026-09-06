@@ -1,10 +1,11 @@
 import Image from "next/image";
+import type { ReactNode } from "react";
 import sectionVector from "../../public/images/section-vector.png";
 
 type PageIntroProps = {
   kicker?: string;
   heading: string;
-  description: string;
+  description: ReactNode;
 };
 
 export default function PageIntro({ kicker, heading, description }: PageIntroProps) {

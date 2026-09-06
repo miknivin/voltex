@@ -8,26 +8,23 @@ import arrowDiscover from "../../public/icons/arrow-discover.svg";
 const SERVICES = [
   {
     icon: cardDiamond,
-    title: "Diamond Liquidity",
-    description:
-      "Structured liquidity against eligible diamonds and diamond jewellery.",
+    title: "Diamond Jewellery",
+    description: "Discover the resale value beyond just gold.",
   },
   {
     icon: cardJewellery,
-    title: "Jewellery Capital",
-    description: "Unlock value from selected precious jewellery collections.",
+    title: "Precious Jewellery",
+    description: "Make more of your platinum pieces.",
   },
   {
     icon: cardPlatinum,
-    title: "Platinum Value Access",
-    description:
-      "A more open route to liquidity for eligible platinum jewellery.",
+    title: "Platinum Jewellery",
+    description: "Transparent valuation and resale.",
   },
   {
     icon: cardWatch,
-    title: "Luxury Timepieces",
-    description:
-      "Specialist liquidity solutions for select watches above ₹50 lakh.",
+    title: "Luxury watches",
+    description: "A refined destination for exceptional timepieces.",
   },
 ];
 
@@ -37,7 +34,7 @@ export default function Services() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="flex flex-col items-center gap-4 text-center">
           <h2 className="font-display text-4xl font-bold text-text-primary sm:text-5xl">
-            Specialised Liquidity Solutions
+            High Value Asset Solutions
           </h2>
           <div className="h-px w-24 bg-gold" />
         </div>

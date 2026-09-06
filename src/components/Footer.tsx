@@ -60,9 +60,12 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-16 border-t border-white/5 pt-8 text-center">
+        <div className="mt-16 flex flex-col items-center gap-1 border-t border-white/5 pt-8 text-center">
           <p className="text-xs tracking-[0.3px] text-text-mutedmore">
-            © 2024 VLTX Sovereign Wealth. Curated Precision.
+            VLTX — The trusted resale platform for high value assets
+          </p>
+          <p className="text-xs tracking-[0.3px] text-text-mutedmore">
+            Diamonds * Platinum * Precious Stones * Watches
           </p>
         </div>
       </div>

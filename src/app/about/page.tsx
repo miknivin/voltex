@@ -20,8 +20,16 @@ export default function AboutPage() {
       <main>
         <PageIntro
           kicker="Our Story"
-          heading="A More Intelligent Relationship With Luxury"
-          description="VLTX is building a specialised platform for people and businesses who own high-value assets but need greater financial flexibility. Our focus is simple: bring clarity to valuation, discipline to financing and dignity to the client experience."
+          heading="We Are Building a Better Resale Ecosystem for High Value Assets"
+          description={
+            <>
+              Buying luxury is easy, selling it at a transparent and
+              professionally assessed value is often not.{" "}
+              <span className="font-semibold text-gold italic">
+                VLTX exists to bridge that gap.
+              </span>
+            </>
+          }
         />
         <StorySection
           kicker="Our Story"
@@ -31,8 +39,18 @@ export default function AboutPage() {
         <AboutExpertise />
         <StorySection
           kicker="For Individuals"
-          heading="Financial Flexibility Without Unnecessary Exposure"
-          description="For individual asset owners, VLTX offers a discreet starting point to understand the potential value of eligible possessions and explore suitable liquidity options. The experience is designed to be clear, private and respectful, whether the asset is a diamond, a piece of precious jewellery, platinum jewellery or an eligible luxury watch."
+          heading="Your Asset. It's True Market Value"
+          items={[
+            "Platinum Articles & Platinum Jewellery",
+            "Certified Diamonds & Diamonds Jewellery",
+            "Precious Stones & Precious Stone Jewellery",
+            "Luxury Watches",
+          ]}
+        />
+        <StorySection
+          kicker="For Business"
+          heading="Turn Slow-Moving Assets into Working Value"
+          items={["Jewellers", "Retailers & Wholesalers", "Luxury Businesses"]}
         />
         <AboutMissionCards />
         <FinalCta />

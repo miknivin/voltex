@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import WhyVltx from "@/components/WhyVltx";
 import Services from "@/components/Services";
 import Assets from "@/components/Assets";
 import PrincipleBand from "@/components/PrincipleBand";
@@ -10,27 +11,29 @@ import Footer from "@/components/Footer";
 const HOW_IT_WORKS_STEPS = [
   {
     number: "01",
-    title: "Share Your Asset",
-    description:
-      "Tell us about your diamond, jewellery, precious stone, platinum piece or luxury watch. You may share photographs and available documents for an initial review.",
+    title: "Share",
+    description: "Tell us what you want to sell.",
   },
   {
     number: "02",
-    title: "Receive a Preliminary Valuation",
+    title: "Evaluate",
     description:
-      "Our team reviews the information provided and helps you understand the potential value of your asset. The initial valuation is complimentary.",
+      "Our specialists assess the asset and supporting documents & test.",
   },
   {
     number: "03",
-    title: "Complete the Assessment",
-    description:
-      "Eligible assets may require additional documentation, physical inspection or specialist verification before a final assessment is made.",
+    title: "Verify",
+    description: "Physical verification and authentication, where required.",
   },
   {
     number: "04",
-    title: "Explore Your Liquidity Options",
-    description:
-      "Once the assessment is complete, our team explains the available options and applicable terms, allowing you to make an informed decision.",
+    title: "Get Your Offer",
+    description: "Receive a transparent resale offer.",
+  },
+  {
+    number: "05",
+    title: "Sell or Lock & Receive the Payment",
+    description: "Accept the offer and complete the transaction securely.",
   },
 ];
 
@@ -40,6 +43,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <WhyVltx />
         <Services />
         <Assets />
         <PrincipleBand

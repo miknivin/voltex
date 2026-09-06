@@ -3,40 +3,35 @@ import sectionVector from "../../public/images/section-vector.png";
 
 const STEPS = [
   {
-    title: "Share Your Asset",
+    number: "01",
+    title: "Share",
     description:
-      "Begin by submitting basic information about your asset. Depending on the category, this may include photographs, invoices, certificates, product details, ownership documents or other relevant records. You may also contact our team to understand the next steps for an in-person assessment.",
+      "Begin by sharing details of your platinum, diamond, precious stone or luxury watch. You may include photographs, invoices, certificates or any supporting documentation you have, and our team will guide you through the next steps for a full assessment.",
     badge: "Digital Submission Available",
   },
   {
-    title: "Expert Authentication",
+    number: "02",
+    title: "Evaluate",
     description:
-      "Our team conducts an initial review of the information provided to determine whether the asset falls within our eligible categories and whether further assessment is appropriate. This preliminary stage helps establish the likely documentation and evaluation requirements.",
+      "Our specialists carefully examine the asset alongside any supporting documents provided. Where required, category-specific testing is carried out to confirm authenticity, quality and condition before an initial valuation is prepared.",
   },
   {
-    title: "Specialist Valuation",
+    number: "03",
+    title: "Verify",
     description:
-      "Eligible assets are assessed using category-specific criteria. The evaluation may consider authenticity, quality, condition, provenance, documentation and relevant market factors. Where necessary, the asset may require physical inspection or additional expert review before a final value is determined.",
+      "Eligible assets may require physical inspection or additional authentication by our specialists. This step ensures every valuation is backed by a thorough, professionally verified assessment before any offer is made.",
   },
   {
-    title: "Receive a Clear Assessment",
+    number: "04",
+    title: "Get Your Offer",
     description:
-      "You receive a structured assessment of the asset and the factors that influence its value. Our objective is not only to provide a figure, but also to make the reasoning behind the assessment easier to understand.",
+      "You receive a clear, transparent resale offer based on the completed evaluation and verification. We explain how the value was determined, so you understand exactly what is being offered and why.",
   },
   {
-    title: "Explore Your Options",
+    number: "05",
+    title: "Sell or Lock & Receive the Payment",
     description:
-      "Based on the assessment, eligible clients may discuss available liquidity solutions with the VLTX team. The final terms depend on the asset, documentation, valuation, customer profile, applicable policies and regulatory requirements.",
-  },
-  {
-    title: "Complete Documentation",
-    description:
-      "If you choose to proceed, the required agreements and compliance documentation are completed before any transaction is finalised. We maintain a clear record of the asset, the agreed terms and the responsibilities of all parties.",
-  },
-  {
-    title: "Secure Settlement",
-    description:
-      "Once all requirements are satisfied, the agreed transaction is completed through the appropriate process. The exact timeline depends on the asset category, verification requirements, documentation and selected solution.",
+      "Once you accept the offer, the transaction is completed securely — whether you choose to sell outright or lock in the value through an asset advance. Payment is processed promptly once all agreements are finalised.",
   },
 ];
 
@@ -53,7 +48,10 @@ export default function ProcessTimeline() {
       <div className="mx-auto flex max-w-3xl flex-col gap-20 px-6 lg:px-10">
         {STEPS.map((step) => (
           <div key={step.title} className="flex flex-col items-center gap-2 text-center">
-            <h2 className="font-display text-3xl leading-[1.3] font-semibold text-text-primary">
+            <div className="flex h-8.5 w-12 items-center justify-center bg-[#121414] text-lg font-bold text-gold">
+              {step.number}
+            </div>
+            <h2 className="mt-4 font-display text-3xl leading-[1.3] font-semibold text-text-primary">
               {step.title}
             </h2>
             <p className="mt-2 max-w-2xl text-base leading-6 text-[#d0c5af]">

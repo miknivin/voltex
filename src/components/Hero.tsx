@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import heroImageSide from "../../public/images/hero-image-side.png";
 import heroContentSide from "../../public/images/hero-content-side.png";
 import badgeValuation from "../../public/icons/badge-valuation.svg";
@@ -39,19 +40,26 @@ export default function Hero() {
             </p>
 
             <h1 className="mt-4 font-display text-6xl leading-[0.95] font-semibold tracking-[-1.28px] text-text-primary sm:text-7xl lg:text-[64px] xl:text-[85px] xl:leading-20">
-              Turn Luxury Into{" "}
-              <span className="text-gold">Financial</span> Freedom
+              Luxury Deserves its <span className="text-gold">True Value</span>
             </h1>
 
             <p className="mt-6 max-w-lg text-[15px] leading-[21.8px] text-text-secondary">
-              Your most valuable possessions should not limit your financial
-              possibilities. VLTX provides a discreet and structured way to
-              unlock liquidity from diamonds, precious stones, jewellery,
-              platinum and select luxury watches. Through expert valuation
-              and transparent documentation, we help asset owners access
-              meaningful capital without compromising the value or dignity
-              of what they own.
+              VLTX is a trusted platform for evaluating and reselling high value
+              assets.
             </p>
+            <ul className="mt-4 flex max-w-lg flex-col gap-2">
+              {[
+                "Platinum Jewellery",
+                "Diamond Jewellery",
+                "Precious Jewellery",
+                "Luxury watches",
+              ].map((item) => (
+                <li key={item} className="flex items-center gap-3 text-[15px] leading-[21.8px] text-text-secondary">
+                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+                  {item}
+                </li>
+              ))}
+            </ul>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
@@ -60,12 +68,12 @@ export default function Hero() {
               >
                 Explore Our Services
               </a>
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 className="rounded-2xl bg-gold px-6 py-3.5 text-sm font-medium tracking-[1.2px] text-[#3c2f00] transition-opacity hover:opacity-90"
               >
                 Request a Free Valuation
-              </a>
+              </Link>
             </div>
           </div>
 
