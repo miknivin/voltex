@@ -1,7 +1,19 @@
 import Image from "next/image";
 import sectionVector from "../../public/images/section-vector.png";
 
-export default function PortfolioHeader() {
+type PortfolioHeaderProps = {
+  kicker?: string;
+  heading?: string;
+  linkText?: string;
+  linkHref?: string;
+};
+
+export default function PortfolioHeader({
+  kicker = "Live Exchange",
+  heading = "Featured Portfolio",
+  linkText = "View Full Inventory",
+  linkHref = "#portfolio",
+}: PortfolioHeaderProps) {
   return (
     <section className="relative overflow-hidden pt-36 pb-16 lg:pt-44">
       <div
@@ -23,17 +35,17 @@ export default function PortfolioHeader() {
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <div>
             <p className="text-xs font-bold tracking-[1.2px] text-gold uppercase">
-              Live Exchange
+              {kicker}
             </p>
             <h1 className="mt-3 font-display text-4xl font-bold text-text-primary sm:text-5xl">
-              Featured Portfolio
+              {heading}
             </h1>
           </div>
           <a
-            href="#portfolio"
+            href={linkHref}
             className="text-[15px] font-bold tracking-[1.2px] text-gold uppercase"
           >
-            View Full Inventory
+            {linkText}
           </a>
         </div>
       </div>

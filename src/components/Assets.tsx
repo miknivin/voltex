@@ -1,7 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import diamondImg from "../../public/images/asset-diamond.png";
-import platinumImg from "../../public/images/asset-platinum.png";
-import watchImg from "../../public/images/asset-watch.png";
+import platinumImg from "../../public/images/platinum/Platinum Bangles.png";
+import watchImg from "../../public/images/watches/AIGNER.png";
 import sectionVector from "../../public/images/section-vector.png";
 
 const ASSETS = [
@@ -10,24 +11,21 @@ const ASSETS = [
     name: "Diamonds",
     description:
       "Loose diamonds and diamond jewellery assessed through a careful review of quality, authenticity and documentation.",
-    price: "₹420,000",
-    change: "+2.4% Est.",
+    href: "/diamonds",
   },
   {
     image: platinumImg,
     name: "Platinum Jewellery",
     description:
       "Platinum pieces assessed for their traits and worth, free from original jeweller restrictions.",
-    price: "₹115,000",
-    change: "+1.8% Est.",
+    href: "/platinum-jewellery",
   },
   {
     image: watchImg,
     name: "Luxury Watches",
     description:
       "Exceptional timepieces evaluated for authenticity, condition, documentation, and market demand.",
-    price: "₹88,500",
-    change: "+0.9% Est.",
+    href: "/luxury-watches",
   },
 ];
 
@@ -61,34 +59,28 @@ export default function Assets() {
 
         <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {ASSETS.map((asset) => (
-            <div key={asset.name} className="flex flex-col gap-6">
+            <Link
+              key={asset.name}
+              href={asset.href}
+              className="group flex flex-col gap-6"
+            >
               <div className="overflow-hidden rounded-2xl">
                 <Image
                   src={asset.image}
                   alt={asset.name}
                   sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                  className="h-auto w-full object-cover"
+                  className="h-auto w-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <h3 className="text-[28px] leading-[36.4px] font-medium text-text-primary">
-                    {asset.name}
-                  </h3>
-                  <p className="mt-1 max-w-xs text-base leading-6 text-text-mutedmore">
-                    {asset.description}
-                  </p>
-                </div>
-                <div className="shrink-0 text-right">
-                  <p className="text-xl font-medium tracking-[0.4px] text-gold">
-                    {asset.price}
-                  </p>
-                  <p className="mt-1 text-[10px] tracking-[1px] text-positive">
-                    {asset.change}
-                  </p>
-                </div>
+              <div>
+                <h3 className="text-[28px] leading-[36.4px] font-medium text-text-primary transition-colors group-hover:text-gold">
+                  {asset.name}
+                </h3>
+                <p className="mt-1 max-w-xs text-base leading-6 text-text-mutedmore">
+                  {asset.description}
+                </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

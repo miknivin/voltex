@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import sectionVector from "../../public/images/section-vector.png";
 
 type FinalCtaProps = {
   kicker?: string;
@@ -16,7 +18,14 @@ export default function FinalCta({
   buttonHref = "/contact",
 }: FinalCtaProps) {
   return (
-    <section id="contact" className="py-20 lg:py-28">
+    <section id="contact" className="relative overflow-hidden py-20 lg:py-28">
+      <Image
+        src={sectionVector}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute -bottom-32 -right-40 -z-10 w-325 max-w-none -rotate-12 opacity-40 select-none lg:w-[1600px]"
+      />
+
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="flex flex-col items-center gap-8 rounded-2xl border border-white/5 bg-card px-6 py-20 text-center sm:px-12">
           <p className="text-xs font-bold tracking-[6px] text-gold uppercase">

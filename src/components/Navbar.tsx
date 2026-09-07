@@ -7,7 +7,7 @@ import { useState } from "react";
 import logo from "../../public/images/nav-logo.png";
 
 const LINKS = [
-  { label: "Services", href: "/#services" },
+  { label: "Home", href: "/" },
   { label: "Assets", href: "/assets" },
   { label: "Process", href: "/process" },
   { label: "About", href: "/about" },
@@ -25,7 +25,12 @@ export default function Navbar() {
     <header className="absolute inset-x-0 top-0 z-50">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-10">
         <Link href="/" className="shrink-0">
-          <Image src={logo} alt="VLTX — Luxury Meets Liquidity" priority className="h-9 w-auto lg:h-10" />
+          <Image
+            src={logo}
+            alt="VLTX — Luxury Meets Liquidity"
+            priority
+            className="h-9 w-auto lg:h-10"
+          />
         </Link>
 
         <nav className="hidden items-center gap-10 rounded-full border border-white/10 bg-pill px-6 py-3 backdrop-blur-sm lg:flex">
@@ -51,9 +56,15 @@ export default function Navbar() {
         >
           <span className="sr-only">Menu</span>
           <div className="flex flex-col gap-1.5">
-            <span className={`h-px w-5 bg-text-primary transition-transform ${open ? "translate-y-1.5 rotate-45" : ""}`} />
-            <span className={`h-px w-5 bg-text-primary transition-opacity ${open ? "opacity-0" : ""}`} />
-            <span className={`h-px w-5 bg-text-primary transition-transform ${open ? "-translate-y-1.5 -rotate-45" : ""}`} />
+            <span
+              className={`h-px w-5 bg-text-primary transition-transform ${open ? "translate-y-1.5 rotate-45" : ""}`}
+            />
+            <span
+              className={`h-px w-5 bg-text-primary transition-opacity ${open ? "opacity-0" : ""}`}
+            />
+            <span
+              className={`h-px w-5 bg-text-primary transition-transform ${open ? "-translate-y-1.5 -rotate-45" : ""}`}
+            />
           </div>
         </button>
       </div>

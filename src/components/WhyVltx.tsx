@@ -1,6 +1,16 @@
+import Image from "next/image";
+import sectionVector from "../../public/images/section-vector.png";
+
 export default function WhyVltx() {
   return (
-    <section className="py-16 lg:py-20">
+    <section className="relative overflow-hidden py-16 lg:py-20">
+      <Image
+        src={sectionVector}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute top-0 left-1/2 -z-10 w-325 max-w-none -translate-x-1/2 opacity-35 select-none lg:w-[1600px]"
+      />
+
       <div className="mx-auto max-w-4xl px-6 text-center lg:px-10">
         <h2 className="font-display text-4xl font-bold text-text-primary sm:text-5xl">
           Why VLTX?

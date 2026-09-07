@@ -1,3 +1,6 @@
+import Image from "next/image";
+import sectionVector from "../../public/images/section-vector.png";
+
 type Step = {
   number: string;
   title: string;
@@ -20,7 +23,14 @@ export default function PrincipleBand({
   steps,
 }: PrincipleBandProps) {
   return (
-    <section id={id} className="bg-bg-band py-20 lg:py-28">
+    <section id={id} className="relative z-0 overflow-hidden bg-bg-band py-20 lg:py-28">
+      <Image
+        src={sectionVector}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute -top-16 left-[-10%] -z-10 w-325 max-w-none rotate-6 opacity-40 select-none lg:w-[1600px]"
+      />
+
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-14 px-6 lg:grid-cols-[minmax(0,1fr)_2fr] lg:gap-16 lg:px-10">
         <div className="max-w-sm">
           <p className="text-xs font-bold tracking-[3.6px] text-gold uppercase">

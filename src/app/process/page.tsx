@@ -5,6 +5,7 @@ import ProcessTimeline from "@/components/ProcessTimeline";
 import PrincipleBand from "@/components/PrincipleBand";
 import FinalCta from "@/components/FinalCta";
 import Footer from "@/components/Footer";
+import bannerProcess from "../../../public/images/banner-process.png";
 
 export const metadata: Metadata = {
   title: "Our Process | VLTX",
@@ -47,6 +48,7 @@ export default function ProcessPage() {
         <PageIntro
           heading="A Clear Process for Valuable Assets"
           description="The value of a luxury asset deserves a process that is careful, transparent and easy to understand. From the first enquiry to the final decision, VLTX is designed to keep you informed at every stage."
+          bannerImage={bannerProcess}
         />
         <ProcessTimeline />
         <PrincipleBand

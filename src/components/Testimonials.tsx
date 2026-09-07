@@ -1,4 +1,5 @@
 import Image from "next/image";
+import sectionVector from "../../public/images/section-vector.png";
 import star from "../../public/icons/star.svg";
 
 const TESTIMONIALS = [
@@ -27,7 +28,14 @@ const TESTIMONIALS = [
 
 export default function Testimonials() {
   return (
-    <section className="py-20 lg:py-28">
+    <section className="relative overflow-hidden py-20 lg:py-28">
+      <Image
+        src={sectionVector}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute -top-16 left-[-10%] -z-10 w-325 max-w-none rotate-6 opacity-40 select-none lg:w-[1600px]"
+      />
+
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {TESTIMONIALS.map((t) => (

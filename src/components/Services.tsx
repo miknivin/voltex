@@ -1,4 +1,5 @@
 import Image from "next/image";
+import sectionVector from "../../public/images/section-vector.png";
 import cardDiamond from "../../public/icons/card-diamond.svg";
 import cardJewellery from "../../public/icons/card-jewellery.svg";
 import cardPlatinum from "../../public/icons/card-platinum.svg";
@@ -30,7 +31,14 @@ const SERVICES = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 lg:py-28">
+    <section id="services" className="relative overflow-hidden py-20 lg:py-28">
+      <Image
+        src={sectionVector}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute -bottom-32 -right-48 -z-10 w-325 max-w-none -rotate-12 opacity-45 select-none lg:w-[1600px]"
+      />
+
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="flex flex-col items-center gap-4 text-center">
           <h2 className="font-display text-4xl font-bold text-text-primary sm:text-5xl">

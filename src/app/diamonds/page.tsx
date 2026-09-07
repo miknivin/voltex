@@ -7,40 +7,27 @@ import Testimonials from "@/components/Testimonials";
 import FinalCta from "@/components/FinalCta";
 import Footer from "@/components/Footer";
 import diamondImg from "../../../public/images/asset-diamond.png";
-import platinumImg from "../../../public/images/asset-platinum.png";
-import watchImg from "../../../public/images/asset-watch.png";
 
 export const metadata: Metadata = {
-  title: "Featured Portfolio | VLTX",
+  title: "Diamonds | VLTX",
   description:
-    "Explore VLTX's live exchange of eligible diamonds, jewellery and luxury watches, plus real-time loan-to-value data.",
+    "Explore VLTX's live exchange of eligible diamonds and diamond jewellery, plus real-time loan-to-value data.",
 };
 
-const DIAMOND: PortfolioItem = {
+// Placeholder items — real photography and per-piece details to be added.
+const ITEM: PortfolioItem = {
   image: diamondImg,
   name: "5.4ct Vivid Pink Diamond",
   spec: "IF - EXCELLENT CUT",
 };
-const PATEK: PortfolioItem = {
-  image: platinumImg,
-  name: "Patek Philippe Ref. 5320G",
-  spec: "MINT - FULL SET",
-};
-const SAPPHIRE: PortfolioItem = {
-  image: watchImg,
-  name: "Blue Sapphire Octagon",
-  spec: "12.8ct ROYAL BLUE",
-};
+const ITEMS = Array.from({ length: 10 }, () => ITEM);
 
-const ROW = [DIAMOND, DIAMOND, PATEK, PATEK, SAPPHIRE];
-const ITEMS = [...ROW, ...ROW];
-
-export default function AssetsPage() {
+export default function DiamondsPage() {
   return (
     <>
       <Navbar />
       <main>
-        <PortfolioHeader />
+        <PortfolioHeader kicker="Live Exchange" heading="Diamonds" />
         <PortfolioGrid items={ITEMS} />
         <DataAnalytics />
         <Testimonials />

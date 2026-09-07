@@ -6,6 +6,7 @@ import AboutExpertise from "@/components/AboutExpertise";
 import AboutMissionCards from "@/components/AboutMissionCards";
 import FinalCta from "@/components/FinalCta";
 import Footer from "@/components/Footer";
+import bannerAbout from "../../../public/images/banner-about.png";
 
 export const metadata: Metadata = {
   title: "About VLTX | Luxury Meets Liquidity",
@@ -30,11 +31,13 @@ export default function AboutPage() {
               </span>
             </>
           }
+          bannerImage={bannerAbout}
         />
         <StorySection
           kicker="Our Story"
           heading="From Ownership to Opportunity"
           description="Diamonds, precious stones, jewellery, platinum and luxury watches carry more than financial value. They often represent years of work, family history, personal achievement or business capital. However, converting these assets into liquidity can be difficult. Conventional options may be limited, fragmented or influenced by where an item was purchased. VLTX is being created to offer a more focused alternative. We aim to make the process of understanding, evaluating and unlocking value from eligible luxury assets more structured, transparent and convenient."
+          decor="bottom-left"
         />
         <AboutExpertise />
         <StorySection
@@ -46,11 +49,13 @@ export default function AboutPage() {
             "Precious Stones & Precious Stone Jewellery",
             "Luxury Watches",
           ]}
+          decor="top-right"
         />
         <StorySection
           kicker="For Business"
           heading="Turn Slow-Moving Assets into Working Value"
           items={["Jewellers", "Retailers & Wholesalers", "Luxury Businesses"]}
+          decor="bottom-right"
         />
         <AboutMissionCards />
         <FinalCta />

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import expertiseImg from "../../public/images/about-expertise.png";
+import sectionVector from "../../public/images/section-vector.png";
 
 const FACTORS = [
   "Authenticity and documentation.",
@@ -12,7 +13,14 @@ const FACTORS = [
 
 export default function AboutExpertise() {
   return (
-    <section className="py-14 lg:py-20">
+    <section className="relative overflow-hidden py-14 lg:py-20">
+      <Image
+        src={sectionVector}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute -top-24 -right-24 -z-10 w-150 max-w-none rotate-12 opacity-35 select-none lg:w-225"
+      />
+
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <div className="overflow-hidden rounded border border-white/5 bg-[rgba(30,32,32,0.6)]">
