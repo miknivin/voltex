@@ -8,7 +8,7 @@ import logo from "../../public/images/nav-logo.png";
 
 const LINKS = [
   { label: "Home", href: "/" },
-  { label: "Assets", href: "/assets" },
+  { label: "Assets", href: "/assets", matchPaths: ["/diamonds", "/platinum-jewellery", "/luxury-watches"] },
   { label: "Process", href: "/process" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
@@ -18,8 +18,11 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
-  const isActive = (href: string) =>
-    href.startsWith("/#") ? pathname === "/" : pathname === href;
+  const isActive = (link: (typeof LINKS)[number]) => {
+    if (link.href.startsWith("/#")) return pathname === "/";
+    if (pathname === link.href) return true;
+    return link.matchPaths?.includes(pathname) ?? false;
+  };
 
   return (
     <header className="absolute inset-x-0 top-0 z-50">
@@ -39,7 +42,7 @@ export default function Navbar() {
               key={link.label}
               href={link.href}
               className={`text-sm font-medium tracking-[1.4px] uppercase transition-colors hover:text-gold ${
-                isActive(link.href) ? "text-gold" : "text-[#839ec5]"
+                isActive(link) ? "text-gold" : "text-[#839ec5]"
               }`}
             >
               {link.label}
@@ -77,7 +80,7 @@ export default function Navbar() {
               href={link.href}
               onClick={() => setOpen(false)}
               className={`rounded-lg px-4 py-3 text-sm font-medium tracking-[1.4px] uppercase transition-colors hover:bg-white/5 hover:text-gold ${
-                isActive(link.href) ? "text-gold" : "text-[#839ec5]"
+                isActive(link) ? "text-gold" : "text-[#839ec5]"
               }`}
             >
               {link.label}

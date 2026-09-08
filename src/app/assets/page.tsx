@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import PortfolioHeader from "@/components/PortfolioHeader";
-import PortfolioGrid, { type PortfolioItem } from "@/components/PortfolioGrid";
+import PortfolioGrid from "@/components/PortfolioGrid";
 import DataAnalytics from "@/components/DataAnalytics";
 import Testimonials from "@/components/Testimonials";
 import FinalCta from "@/components/FinalCta";
 import Footer from "@/components/Footer";
-import diamondImg from "../../../public/images/asset-diamond.png";
-import platinumImg from "../../../public/images/asset-platinum.png";
-import watchImg from "../../../public/images/asset-watch.png";
+import { DIAMOND_ITEMS, PLATINUM_ITEMS, WATCH_ITEMS } from "@/lib/portfolio-data";
 
 export const metadata: Metadata = {
   title: "Featured Portfolio | VLTX",
@@ -16,24 +14,7 @@ export const metadata: Metadata = {
     "Explore VLTX's live exchange of eligible diamonds, jewellery and luxury watches, plus real-time loan-to-value data.",
 };
 
-const DIAMOND: PortfolioItem = {
-  image: diamondImg,
-  name: "5.4ct Vivid Pink Diamond",
-  spec: "IF - EXCELLENT CUT",
-};
-const PATEK: PortfolioItem = {
-  image: platinumImg,
-  name: "Patek Philippe Ref. 5320G",
-  spec: "MINT - FULL SET",
-};
-const SAPPHIRE: PortfolioItem = {
-  image: watchImg,
-  name: "Blue Sapphire Octagon",
-  spec: "12.8ct ROYAL BLUE",
-};
-
-const ROW = [DIAMOND, DIAMOND, PATEK, PATEK, SAPPHIRE];
-const ITEMS = [...ROW, ...ROW];
+const ITEMS = [...DIAMOND_ITEMS, ...PLATINUM_ITEMS, ...WATCH_ITEMS];
 
 export default function AssetsPage() {
   return (
