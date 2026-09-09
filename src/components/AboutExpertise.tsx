@@ -22,8 +22,8 @@ export default function AboutExpertise() {
       />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
-          <div className="overflow-hidden rounded border border-white/5 bg-[rgba(30,32,32,0.6)]">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[2fr_3fr] lg:gap-16">
+          <div className="mx-auto w-full max-w-sm overflow-hidden rounded border border-white/5 bg-[rgba(30,32,32,0.6)] lg:max-w-none">
             <Image
               src={expertiseImg}
               alt="Detailed appraisal of a luxury asset"

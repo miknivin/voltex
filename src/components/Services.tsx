@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import sectionVector from "../../public/images/section-vector.png";
 import cardDiamond from "../../public/icons/card-diamond.svg";
 import cardJewellery from "../../public/icons/card-jewellery.svg";
@@ -67,13 +68,13 @@ export default function Services() {
               <p className="relative mt-4 flex-1 text-base leading-6 text-text-muted">
                 {service.description}
               </p>
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 className="relative mt-8 flex w-fit items-center gap-2 text-[10px] font-normal tracking-[1px] text-gold uppercase"
               >
                 Discover
                 <Image src={arrowDiscover} alt="" className="h-2.5 w-auto" />
-              </a>
+              </Link>
             </div>
           ))}
         </div>

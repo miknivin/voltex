@@ -49,12 +49,12 @@ export default function Assets() {
               Assets We Evaluate
             </h2>
           </div>
-          <a
-            href="#contact"
+          <Link
+            href="/assets"
             className="text-[15px] font-bold tracking-[1.2px] text-gold uppercase"
           >
             Explore Eligible Assets
-          </a>
+          </Link>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">

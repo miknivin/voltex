@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import sectionVector from "../../public/images/section-vector.png";
 
 const STEPS = [
@@ -79,6 +80,18 @@ export default function ProcessTimeline() {
             )}
           </div>
         ))}
+
+        <div className="flex flex-col items-center gap-4 text-center">
+          <p className="text-base leading-6 text-[#d0c5af]">
+            Ready to find out what your asset is worth?
+          </p>
+          <Link
+            href="/contact"
+            className="rounded-2xl bg-gradient-to-r from-gold to-gold-deep px-10 py-4 text-xs font-bold tracking-[1.2px] text-[#3c2f00] uppercase transition-opacity hover:opacity-90"
+          >
+            Request an Evaluation
+          </Link>
+        </div>
       </div>
     </section>
   );
