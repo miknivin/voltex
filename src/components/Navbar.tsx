@@ -8,7 +8,7 @@ import logo from "../../public/images/nav-logo.png";
 
 const LINKS = [
   { label: "Home", href: "/" },
-  { label: "Assets", href: "/assets", matchPaths: ["/diamonds", "/platinum-jewellery", "/luxury-watches"] },
+  { label: "Assets", href: "/assets", matchPaths: ["/diamonds", "/platinum-jewellery", "/precious-gemstones", "/luxury-watches"] },
   { label: "Process", href: "/process" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },

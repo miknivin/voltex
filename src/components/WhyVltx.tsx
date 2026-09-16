@@ -1,6 +1,38 @@
 import Image from "next/image";
 import sectionVector from "../../public/images/section-vector.png";
 
+const REASONS = [
+  {
+    number: "01",
+    title: "Expertise You Can Trust",
+    description: "Specialised understanding across each luxury category.",
+  },
+  {
+    number: "02",
+    title: "Value You Can Understand",
+    description:
+      "Clear evaluation based on the qualities and condition of your item.",
+  },
+  {
+    number: "03",
+    title: "Complete Discretion",
+    description:
+      "Your valuables, information and transaction are handled confidentially.",
+  },
+  {
+    number: "04",
+    title: "Clear & Considered Offers",
+    description:
+      "Straightforward offers designed to reflect the assessed value.",
+  },
+  {
+    number: "05",
+    title: "Seamless Experience",
+    description:
+      "A professionally managed journey from evaluation to completion.",
+  },
+];
+
 export default function WhyVltx() {
   return (
     <section className="relative overflow-hidden py-16 lg:py-20">
@@ -30,6 +62,25 @@ export default function WhyVltx() {
             VLTX changes that.
           </p>
         </div>
+      </div>
+
+      <div className="mx-auto mt-14 grid max-w-7xl grid-cols-1 gap-4 px-6 sm:grid-cols-2 lg:grid-cols-3 lg:px-10">
+        {REASONS.map((reason) => (
+          <div
+            key={reason.number}
+            className="flex h-full flex-col gap-3 rounded-2xl border border-white/5 bg-card p-7"
+          >
+            <span className="text-xs font-bold tracking-[2px] text-gold">
+              {reason.number}
+            </span>
+            <h3 className="font-display text-lg font-semibold text-text-primary">
+              {reason.title}
+            </h3>
+            <p className="text-sm leading-6 text-text-muted">
+              {reason.description}
+            </p>
+          </div>
+        ))}
       </div>
     </section>
   );

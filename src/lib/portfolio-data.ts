@@ -11,6 +11,9 @@ import bangles from "../../public/images/platinum/Platinum Bangles.png";
 import chain from "../../public/images/platinum/Platinum Chain.png";
 import earrings from "../../public/images/platinum/Platinum Earrings.png";
 import ring from "../../public/images/platinum/Platinum Ring.png";
+import emeraldRing from "../../public/images/gemstones/Emerald Ring & Gemstone Collection.jpg";
+import gemstonePendantTrio from "../../public/images/gemstones/Gemstone Pendant Trio.jpg";
+import gemstonePendantTrioIvory from "../../public/images/gemstones/Gemstone Pendant Trio Ivory.jpg";
 import aigner from "../../public/images/watches/AIGNER.png";
 import audemarsPiguet from "../../public/images/watches/Audemars Piguet.png";
 import balmain from "../../public/images/watches/BALMAIN.png";
@@ -36,6 +39,12 @@ export const PLATINUM_ITEMS: PortfolioItem[] = [
   { image: chain, name: "Platinum Chain", spec: "CERTIFIED PLATINUM" },
   { image: earrings, name: "Platinum Earrings", spec: "CERTIFIED PLATINUM" },
   { image: ring, name: "Platinum Ring", spec: "CERTIFIED PLATINUM" },
+];
+
+export const GEMSTONE_ITEMS: PortfolioItem[] = [
+  { image: emeraldRing, name: "Emerald Ring & Gemstone Collection", spec: "CERTIFIED AUTHENTIC" },
+  { image: gemstonePendantTrio, name: "Gemstone Pendant Trio", spec: "CERTIFIED AUTHENTIC" },
+  { image: gemstonePendantTrioIvory, name: "Gemstone Pendant Trio", spec: "CERTIFIED AUTHENTIC" },
 ];
 
 export const WATCH_ITEMS: PortfolioItem[] = [

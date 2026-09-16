@@ -6,23 +6,21 @@ import DataAnalytics from "@/components/DataAnalytics";
 import Testimonials from "@/components/Testimonials";
 import FinalCta from "@/components/FinalCta";
 import Footer from "@/components/Footer";
-import { DIAMOND_ITEMS, PLATINUM_ITEMS, WATCH_ITEMS, GEMSTONE_ITEMS } from "@/lib/portfolio-data";
+import { GEMSTONE_ITEMS } from "@/lib/portfolio-data";
 
 export const metadata: Metadata = {
-  title: "Featured Portfolio | VLTX",
+  title: "Precious Gem Stones & Jewellery | VLTX",
   description:
-    "Explore VLTX's live exchange of eligible diamonds, jewellery, precious gemstones and luxury watches, plus real-time loan-to-value data.",
+    "Explore VLTX's live exchange of eligible emeralds, rubies, sapphires and fine gemstone jewellery, plus real-time loan-to-value data.",
 };
 
-const ITEMS = [...DIAMOND_ITEMS, ...PLATINUM_ITEMS, ...GEMSTONE_ITEMS, ...WATCH_ITEMS];
-
-export default function AssetsPage() {
+export default function PreciousGemstonesPage() {
   return (
     <>
       <Navbar />
       <main>
-        <PortfolioHeader showLink={false} />
-        <PortfolioGrid items={ITEMS} />
+        <PortfolioHeader kicker="Live Exchange" heading="Precious Gem Stones & Jewellery" />
+        <PortfolioGrid items={GEMSTONE_ITEMS} />
         <DataAnalytics />
         <Testimonials />
         <FinalCta />

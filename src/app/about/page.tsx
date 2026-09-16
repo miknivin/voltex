@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import PageIntro from "@/components/PageIntro";
+import CompanyFacts from "@/components/CompanyFacts";
 import StorySection from "@/components/StorySection";
 import AboutExpertise from "@/components/AboutExpertise";
 import AboutMissionCards from "@/components/AboutMissionCards";
+import Leadership from "@/components/Leadership";
 import FinalCta from "@/components/FinalCta";
 import Footer from "@/components/Footer";
 import bannerAbout from "../../../public/images/banner-about.png";
@@ -33,6 +35,7 @@ export default function AboutPage() {
           }
           bannerImage={bannerAbout}
         />
+        <CompanyFacts />
         <StorySection
           kicker="Our Story"
           heading="From Ownership to Opportunity"
@@ -58,6 +61,7 @@ export default function AboutPage() {
           decor="bottom-right"
         />
         <AboutMissionCards />
+        <Leadership />
         <FinalCta />
       </main>
       <Footer />

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import diamondImg from "../../public/images/asset-diamond.png";
 import platinumImg from "../../public/images/platinum/Platinum Bangles.png";
+import gemstoneImg from "../../public/images/gemstones/Gemstone Pendant Trio.jpg";
 import watchImg from "../../public/images/watches/AIGNER.png";
 import sectionVector from "../../public/images/section-vector.png";
 
@@ -19,6 +20,13 @@ const ASSETS = [
     description:
       "Platinum pieces assessed for their traits and worth, free from original jeweller restrictions.",
     href: "/platinum-jewellery",
+  },
+  {
+    image: gemstoneImg,
+    name: "Precious Gem Stones & Jewellery",
+    description:
+      "Emeralds, rubies and sapphires assessed on origin, colour, clarity and cut, alongside the quality of their setting.",
+    href: "/precious-gemstones",
   },
   {
     image: watchImg,
@@ -57,7 +65,7 @@ export default function Assets() {
           </Link>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {ASSETS.map((asset) => (
             <Link
               key={asset.name}

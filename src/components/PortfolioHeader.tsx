@@ -7,6 +7,7 @@ type PortfolioHeaderProps = {
   heading?: string;
   linkText?: string;
   linkHref?: string;
+  showLink?: boolean;
 };
 
 export default function PortfolioHeader({
@@ -14,6 +15,7 @@ export default function PortfolioHeader({
   heading = "Featured Portfolio",
   linkText = "View Full Inventory",
   linkHref = "/assets",
+  showLink = true,
 }: PortfolioHeaderProps) {
   return (
     <section className="relative overflow-hidden pt-36 pb-16 lg:pt-44">
@@ -42,12 +44,14 @@ export default function PortfolioHeader({
               {heading}
             </h1>
           </div>
-          <Link
-            href={linkHref}
-            className="text-[15px] font-bold tracking-[1.2px] text-gold uppercase"
-          >
-            {linkText}
-          </Link>
+          {showLink && (
+            <Link
+              href={linkHref}
+              className="text-[15px] font-bold tracking-[1.2px] text-gold uppercase"
+            >
+              {linkText}
+            </Link>
+          )}
         </div>
       </div>
     </section>
