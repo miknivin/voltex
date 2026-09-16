@@ -1,76 +1,95 @@
 import Image from "next/image";
+import Link from "next/link";
 import logo from "../../public/images/emerald-theme/VLTX Logo.png";
 
-const COLUMNS = [
-  {
-    heading: "Company",
-    links: [
-      { label: "About Us", href: "/about" },
-      { label: "Our Experts", href: "/about" },
-      { label: "Vault Security", href: "/about" },
-    ],
-  },
-  {
-    heading: "Legal",
-    links: [
-      { label: "Terms of Service", href: "#" },
-      { label: "Privacy Policy", href: "#" },
-      { label: "Regulatory Disclosures", href: "#" },
-    ],
-  },
-  {
-    heading: "Contact",
-    links: [
-      { label: "concierge@vltx.com", href: "mailto:concierge@vltx.com" },
-      { label: "+1 (800) 555-VLTX", href: "tel:+18005558589" },
-      { label: "Contact Us", href: "/contact" },
-    ],
-  },
+const EXPLORE_LINKS = [
+  { label: "What We Value", href: "/#assets" },
+  { label: "How It Works", href: "/#process" },
+  { label: "Why VLTX", href: "/#why-vltx" },
+];
+
+const COMPANY_LINKS = [
+  { label: "About VLTX", href: "/about" },
+  { label: "Leadership", href: "/#leadership" },
+  { label: "Contact", href: "/contact" },
+];
+
+const CATEGORY_LINKS = [
+  { label: "Platinum", href: "/platinum-jewellery" },
+  { label: "Certified Diamonds & Diamond Jewellery", href: "/diamonds" },
+  { label: "Precious Gem Stones & Jewellery", href: "/precious-gemstones" },
+  { label: "Luxury Watches", href: "/luxury-watches" },
 ];
 
 export default function Footer() {
   return (
     <footer className="border-t border-line bg-bg-deep">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="sm:col-span-2 lg:col-span-1">
+      <span className="block h-px w-full bg-gradient-to-r from-transparent via-gold to-transparent" />
+      <div className="mx-auto max-w-7xl px-6 py-14 lg:px-10">
+        <div className="grid gap-10 md:grid-cols-[1.3fr_2fr]">
+          <div>
             <Image
               src={logo}
               alt="VLTX — Luxury Meets Liquidity"
               className="h-10 w-auto"
             />
-            <p className="mt-6 max-w-xs text-xs leading-[19.5px] tracking-[0.3px] text-text-mutedmore">
-              Redefining high-net-worth liquidity through the lens of luxury
-              horology and rare gems.
+            <p className="mt-5 max-w-xs text-sm leading-6 text-text-muted">
+              Where luxury meets liquidity — secure pledging and resale of
+              high-value assets.
             </p>
           </div>
 
-          {COLUMNS.map((col) => (
-            <div key={col.heading}>
-              <h3 className="text-xl font-bold text-gold-deep">{col.heading}</h3>
-              <ul className="mt-6 flex flex-col gap-3">
-                {col.links.map((link) => (
-                  <li key={link.label}>
-                    <a
-                      href={link.href}
-                      className="text-xs tracking-[0.3px] text-text-mutedmore transition-colors hover:text-text-primary"
-                    >
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
+            <div>
+              <p className="mb-4 text-[11px] font-bold tracking-[2px] text-gold-deep uppercase">
+                Explore
+              </p>
+              {EXPLORE_LINKS.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="block w-fit py-1.5 text-sm text-text-muted transition-colors hover:text-text-primary"
+                >
+                  {link.label}
+                </Link>
+              ))}
             </div>
-          ))}
+
+            <div>
+              <p className="mb-4 text-[11px] font-bold tracking-[2px] text-gold-deep uppercase">
+                Company
+              </p>
+              {COMPANY_LINKS.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="block w-fit py-1.5 text-sm text-text-muted transition-colors hover:text-text-primary"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+
+            <div>
+              <p className="mb-4 text-[11px] font-bold tracking-[2px] text-gold-deep uppercase">
+                Categories
+              </p>
+              {CATEGORY_LINKS.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="block w-fit py-1.5 text-sm text-text-muted transition-colors hover:text-text-primary"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
 
-        <div className="mt-16 flex flex-col items-center gap-1 border-t border-line pt-8 text-center">
-          <p className="text-xs tracking-[0.3px] text-text-mutedmore">
-            VLTX — The trusted resale platform for high value assets
-          </p>
-          <p className="text-xs tracking-[0.3px] text-text-mutedmore">
-            Diamonds * Platinum * Precious Stones * Watches
-          </p>
+        <div className="mt-14 flex flex-col gap-3 border-t border-line pt-7 text-xs text-text-mutedmore sm:flex-row sm:items-center sm:justify-between">
+          <span>© 2026 VLTX (LuxVault). All rights reserved.</span>
+          <span>Where luxury meets liquidity.</span>
         </div>
       </div>
     </footer>

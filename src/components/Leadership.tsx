@@ -16,7 +16,7 @@ function PortraitPlaceholder() {
 
 export default function Leadership() {
   return (
-    <section className="relative overflow-hidden py-16 lg:py-20">
+    <section id="leadership" className="relative overflow-hidden py-16 lg:py-20">
       <GradientOrbs variant="bottom-left" opacity={0.1} />
 
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:grid-cols-[minmax(0,1fr)_2fr] lg:gap-16 lg:px-10">

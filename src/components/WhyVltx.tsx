@@ -34,7 +34,7 @@ const REASONS = [
 
 export default function WhyVltx() {
   return (
-    <section className="relative overflow-hidden py-20 lg:py-28">
+    <section id="why-vltx" className="relative overflow-hidden py-20 lg:py-28">
       <GradientOrbs variant="center" opacity={0.12} />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10">

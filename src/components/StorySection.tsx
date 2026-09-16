@@ -21,11 +21,11 @@ export default function StorySection({
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <p className="eyebrow text-gold-deep">{kicker}</p>
-        <h2 className="section-title mt-5 max-w-3xl text-text-primary">
+        <h2 className="mt-4 max-w-2xl font-display text-2xl leading-tight font-medium tracking-tight text-text-primary sm:text-3xl">
           {heading}
         </h2>
         {description && (
-          <p className="mt-7 max-w-2xl text-[15px] leading-[21.8px] text-text-secondary">
+          <p className="mt-4 max-w-2xl text-[15px] leading-[21.8px] text-text-secondary">
             {description}
           </p>
         )}
