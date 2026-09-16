@@ -14,7 +14,7 @@ export default function StatsBand() {
 
       <div className="mx-auto grid max-w-7xl gap-10 px-6 sm:grid-cols-2 lg:grid-cols-4 lg:px-10">
         <div className="border-l border-white/40 pl-5">
-          <p className="font-display text-4xl font-bold text-white sm:text-5xl">
+          <p className="font-display text-4xl font-semibold text-white sm:text-5xl">
             25+
           </p>
           <p className="mt-3 text-[11px] font-bold tracking-[2px] text-white/80 uppercase">
@@ -36,7 +36,7 @@ export default function StatsBand() {
         </div>
 
         <div className="border-l border-white/40 pl-5">
-          <p className="font-display text-4xl font-bold text-white sm:text-5xl">
+          <p className="font-display text-4xl font-semibold text-white sm:text-5xl">
             100%
           </p>
           <p className="mt-3 text-[11px] font-bold tracking-[2px] text-white/80 uppercase">
@@ -45,7 +45,7 @@ export default function StatsBand() {
         </div>
 
         <div className="border-l border-white/40 pl-5">
-          <p className="font-display text-4xl font-bold text-white sm:text-5xl">
+          <p className="font-display text-4xl font-semibold text-white sm:text-5xl">
             24hr
           </p>
           <p className="mt-3 text-[11px] font-bold tracking-[2px] text-white/80 uppercase">

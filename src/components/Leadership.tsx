@@ -21,11 +21,11 @@ export default function Leadership() {
 
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:grid-cols-[minmax(0,1fr)_2fr] lg:gap-16 lg:px-10">
         <div className="max-w-sm">
-          <p className="text-xs font-bold tracking-[3.6px] text-gold-deep uppercase">
-            Leadership
-          </p>
-          <h2 className="mt-6 font-display text-4xl font-bold text-text-primary sm:text-5xl">
-            Founder &amp; Chairman
+          <p className="eyebrow text-gold-deep">Leadership</p>
+          <h2 className="section-title mt-5 text-text-primary">
+            Founder &amp;
+            <br />
+            <span className="text-gold-deep">Chairman</span>
           </h2>
         </div>
 

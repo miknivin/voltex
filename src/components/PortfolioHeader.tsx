@@ -31,10 +31,8 @@ export default function PortfolioHeader({
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <div>
-            <p className="text-xs font-bold tracking-[1.2px] text-gold-deep uppercase">
-              {kicker}
-            </p>
-            <h1 className="mt-3 font-display text-4xl font-bold text-text-primary sm:text-5xl">
+            <p className="eyebrow text-gold-deep">{kicker}</p>
+            <h1 className="section-title mt-5 text-text-primary">
               {heading}
             </h1>
           </div>

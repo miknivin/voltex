@@ -38,13 +38,13 @@ export default function HowItWorks() {
 
       <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-[0.75fr_1.25fr] lg:px-10">
         <div className="lg:sticky lg:top-24 lg:self-start">
-          <p className="text-xs font-bold tracking-[3.6px] text-gold-deep uppercase">
-            A Clear Path Forward
-          </p>
-          <h2 className="mt-5 font-display text-4xl font-bold text-text-primary sm:text-5xl">
-            How It Works
+          <p className="eyebrow text-gold-deep">A Clear Path Forward</p>
+          <h2 className="section-title mt-5 text-text-primary">
+            How It
+            <br />
+            <span className="text-gold-deep">Works</span>
           </h2>
-          <p className="mt-6 max-w-md text-base leading-6 text-text-muted">
+          <p className="mt-7 max-w-md text-base leading-6 text-text-muted">
             A simple, professionally managed journey from first conversation
             to secure completion.
           </p>

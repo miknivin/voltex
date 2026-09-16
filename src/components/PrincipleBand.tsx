@@ -30,14 +30,10 @@ export default function PrincipleBand({
 
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-14 px-6 lg:grid-cols-[minmax(0,1fr)_2fr] lg:gap-16 lg:px-10">
         <div className="max-w-sm">
-          <p className="text-xs font-bold tracking-[3.6px] text-white/80 uppercase">
-            {kicker}
-          </p>
-          <h2 className="mt-6 font-display text-5xl leading-18 font-bold text-white">
-            {heading}
-          </h2>
+          <p className="eyebrow text-white/80">{kicker}</p>
+          <h2 className="section-title mt-5 text-white">{heading}</h2>
           {description && (
-            <p className="mt-6 text-base leading-6 text-white/85">
+            <p className="mt-7 text-base leading-6 text-white/85">
               {description}
             </p>
           )}

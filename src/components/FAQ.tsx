@@ -38,17 +38,18 @@ export default function FAQ() {
     <section id="faq" className="relative overflow-hidden py-20 lg:py-28">
       <GradientOrbs variant="top-right" opacity={0.1} />
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="flex flex-col items-center gap-4 text-center">
-          <p className="text-xs font-bold tracking-[3.6px] text-gold-deep uppercase">
-            Common Questions
+      <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-10">
+        <div>
+          <p className="eyebrow text-gold-deep">Common Questions</p>
+          <h2 className="section-title mt-5 text-text-primary">FAQ</h2>
+          <p className="mt-7 max-w-md text-base leading-6 text-text-muted">
+            Everything clients usually ask about valuing platinum, diamonds,
+            gemstones and luxury watches.
           </p>
-          <h2 className="font-display text-4xl font-bold text-text-primary sm:text-5xl">
-            FAQ
-          </h2>
+          <span className="mt-8 block h-px w-32 bg-gradient-to-r from-transparent via-gold to-transparent" />
         </div>
 
-        <div className="mx-auto mt-12 max-w-3xl border-t border-line">
+        <div className="border-t border-line">
           {FAQS.map((faq) => (
             <details
               key={faq.question}

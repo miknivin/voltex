@@ -41,10 +41,8 @@ export default function WhatWeValue() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="mb-14 grid gap-8 lg:grid-cols-2 lg:items-end">
           <div>
-            <p className="text-xs font-bold tracking-[1.2px] text-gold-deep uppercase">
-              Selected Categories
-            </p>
-            <h2 className="mt-3 font-display text-4xl font-bold text-text-primary sm:text-5xl">
+            <p className="eyebrow text-gold-deep">Selected Categories</p>
+            <h2 className="section-title mt-5 text-text-primary">
               What We Value
             </h2>
           </div>
@@ -61,7 +59,7 @@ export default function WhatWeValue() {
               href={category.href}
               className="group relative flex h-full flex-col overflow-hidden rounded-lg border border-line bg-bg"
             >
-              <div className="relative aspect-3/4 overflow-hidden border-b border-line">
+              <div className="sheen relative aspect-3/4 overflow-hidden border-b border-line">
                 <Image
                   src={category.image}
                   alt={category.name}

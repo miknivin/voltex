@@ -27,10 +27,10 @@ export default function AboutExpertise() {
           </div>
 
           <div>
-            <h2 className="font-display text-4xl font-bold text-text-primary sm:text-5xl">
+            <h2 className="section-title text-text-primary">
               Expertise Before Estimation
             </h2>
-            <p className="mt-5 text-base leading-[26px] text-text-muted">
+            <p className="mt-7 text-base leading-[26px] text-text-muted">
               A luxury asset cannot be understood by weight or appearance
               alone. Its value may depend on multiple factors, including:
             </p>

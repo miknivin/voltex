@@ -20,14 +20,12 @@ export default function StorySection({
       {decor !== "none" && <GradientOrbs variant={decor} opacity={0.1} />}
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <p className="text-[15px] font-semibold tracking-[3.6px] text-gold-deep uppercase">
-          {kicker}
-        </p>
-        <h2 className="mt-3 font-display text-4xl leading-[1.15] font-semibold tracking-[-1.28px] text-text-primary sm:text-5xl lg:text-[50px]">
+        <p className="eyebrow text-gold-deep">{kicker}</p>
+        <h2 className="section-title mt-5 max-w-3xl text-text-primary">
           {heading}
         </h2>
         {description && (
-          <p className="mt-6 text-[15px] leading-[21.8px] text-text-secondary">
+          <p className="mt-7 max-w-2xl text-[15px] leading-[21.8px] text-text-secondary">
             {description}
           </p>
         )}

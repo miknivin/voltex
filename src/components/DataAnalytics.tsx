@@ -17,13 +17,13 @@ export default function DataAnalytics() {
       <GradientOrbs variant="bottom-right" opacity={0.12} />
 
       <div className="mx-auto max-w-5xl px-6 text-center lg:px-10">
-        <p className="text-xs font-bold tracking-[4.8px] text-gold-deep uppercase">
+        <p className="eyebrow justify-center text-gold-deep">
           Data &amp; Analytics
         </p>
-        <h2 className="mt-4 font-display text-4xl leading-[1.2] font-bold text-text-primary sm:text-5xl">
+        <h2 className="section-title mt-5 text-text-primary">
           Precision Valuation
         </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-base leading-6 text-text-muted">
+        <p className="mx-auto mt-7 max-w-2xl text-base leading-6 text-text-muted">
           Real-time market tracking for luxury asset categories, allowing for
           instant loan eligibility calculations.
         </p>

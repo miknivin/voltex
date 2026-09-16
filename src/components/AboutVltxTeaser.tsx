@@ -19,10 +19,8 @@ export default function AboutVltxTeaser() {
       <GradientOrbs variant="wide" opacity={0.1} />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
-        <p className="text-xs font-bold tracking-[3.6px] text-white/80 uppercase">
-          About VLTX
-        </p>
-        <h2 className="mt-5 max-w-4xl font-display text-3xl leading-[1.15] font-bold text-white sm:text-4xl">
+        <p className="eyebrow text-white/80">About VLTX</p>
+        <h2 className="mt-6 max-w-4xl font-display text-3xl leading-[1.1] font-semibold tracking-tight text-white sm:text-4xl">
           A Premium Platform for Unlocking the Value of High-Value Assets
         </h2>
         <p className="mt-6 max-w-3xl text-base leading-6 text-white/85">

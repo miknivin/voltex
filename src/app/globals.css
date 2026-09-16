@@ -58,3 +58,45 @@ h1, h2, h3 {
   0%, 100% { transform: translate(0, 0) scale(1); }
   50% { transform: translate(-5%, -4%) scale(1.05); }
 }
+
+@utility section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+@utility eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  &::before {
+    content: "";
+    width: 2.5rem;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.6;
+  }
+}
+
+@utility sheen {
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(115deg, transparent 35%, oklch(1 0 0 / 45%) 50%, transparent 65%);
+    transform: translateX(-120%);
+    transition: transform 900ms ease;
+    pointer-events: none;
+  }
+}
+.group:hover .sheen::after {
+  transform: translateX(120%);
+}

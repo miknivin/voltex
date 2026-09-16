@@ -22,10 +22,8 @@ export default function FinalCta({
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="flex flex-col items-center gap-8 rounded-2xl border border-line bg-card px-6 py-20 text-center sm:px-12">
-          <p className="text-xs font-bold tracking-[6px] text-gold-deep uppercase">
-            {kicker}
-          </p>
-          <h2 className="font-display text-5xl leading-[1.1] font-bold text-text-primary sm:text-6xl lg:text-[64px]">
+          <p className="eyebrow justify-center text-gold-deep">{kicker}</p>
+          <h2 className="font-display text-3xl leading-[1.08] font-semibold tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
             {heading}
           </h2>
           <p className="max-w-2xl text-base leading-6 text-text-muted">
