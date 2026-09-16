@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import PageIntro from "@/components/PageIntro";
 import CompanyFacts from "@/components/CompanyFacts";
 import StorySection from "@/components/StorySection";
+import AudienceCards from "@/components/AudienceCards";
 import AboutExpertise from "@/components/AboutExpertise";
 import AboutMissionCards from "@/components/AboutMissionCards";
 import Leadership from "@/components/Leadership";
@@ -23,7 +24,7 @@ export default function AboutPage() {
       <main>
         <PageIntro
           kicker="Our Story"
-          heading="We Are Building a Better Resale Ecosystem for High Value Assets"
+          heading="Building a Better Resale Ecosystem"
           description={
             <>
               Buying luxury is easy, selling it at a transparent and
@@ -43,22 +44,24 @@ export default function AboutPage() {
           decor="bottom-left"
         />
         <AboutExpertise />
-        <StorySection
-          kicker="For Individuals"
-          heading="Your Asset. It's True Market Value"
-          items={[
-            "Platinum Articles & Platinum Jewellery",
-            "Certified Diamonds & Diamonds Jewellery",
-            "Precious Stones & Precious Stone Jewellery",
-            "Luxury Watches",
+        <AudienceCards
+          audiences={[
+            {
+              kicker: "For Individuals",
+              heading: "Your Asset. It's True Market Value",
+              items: [
+                "Platinum Articles & Platinum Jewellery",
+                "Certified Diamonds & Diamonds Jewellery",
+                "Precious Stones & Precious Stone Jewellery",
+                "Luxury Watches",
+              ],
+            },
+            {
+              kicker: "For Business",
+              heading: "Turn Slow-Moving Assets into Working Value",
+              items: ["Jewellers", "Retailers & Wholesalers", "Luxury Businesses"],
+            },
           ]}
-          decor="top-right"
-        />
-        <StorySection
-          kicker="For Business"
-          heading="Turn Slow-Moving Assets into Working Value"
-          items={["Jewellers", "Retailers & Wholesalers", "Luxury Businesses"]}
-          decor="bottom-right"
         />
         <AboutMissionCards />
         <Leadership />

@@ -26,7 +26,9 @@ export default function PageIntro({ kicker, heading, description, bannerImage }:
         <div className={bannerImage ? "grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16" : ""}>
           <div className="max-w-3xl">
             {kicker && <p className="eyebrow text-gold-deep">{kicker}</p>}
-            <h1 className={`section-title text-text-primary ${kicker ? "mt-5" : ""}`}>
+            <h1
+              className={`font-display text-4xl leading-[1.08] font-medium tracking-tight text-text-primary sm:text-5xl lg:text-6xl ${kicker ? "mt-5" : ""}`}
+            >
               {heading}
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-[28.8px] tracking-[0.18px] text-text-muted">
