@@ -36,8 +36,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const isActive = (link: (typeof LINKS)[number]) => {
-    if (link.href === "/about") return pathname === "/about";
-    if (link.href.startsWith("/#")) return pathname === "/";
+    if (link.href.startsWith("/#")) return false;
     return pathname === link.href;
   };
 
