@@ -8,25 +8,42 @@ import logo from "../../public/images/emerald-theme/VLTX Logo.png";
 
 const LINKS = [
   { label: "Home", href: "/" },
-  { label: "Assets", href: "/assets", matchPaths: ["/diamonds", "/platinum-jewellery", "/precious-gemstones", "/luxury-watches"] },
-  { label: "Process", href: "/process" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "What We Value", href: "/#assets" },
+  { label: "How It Works", href: "/#process" },
+  { label: "Why VLTX", href: "/#why-vltx" },
+  { label: "About VLTX", href: "/about" },
+  { label: "Leadership", href: "/#leadership" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Contact", href: "/#contact" },
 ];
+
+function ArrowDownRightIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className}>
+      <path
+        d="M7 7l10 10M17 7v10H7"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
   const isActive = (link: (typeof LINKS)[number]) => {
+    if (link.href === "/about") return pathname === "/about";
     if (link.href.startsWith("/#")) return pathname === "/";
-    if (pathname === link.href) return true;
-    return link.matchPaths?.includes(pathname) ?? false;
+    return pathname === link.href;
   };
 
   return (
     <header className="absolute inset-x-0 top-0 z-50">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-10">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-6 lg:px-10">
         <Link href="/" className="flex shrink-0 items-center">
           <Image
             src={logo}
@@ -36,12 +53,12 @@ export default function Navbar() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-10 rounded-full border border-line bg-bg/70 px-6 py-3 shadow-sm backdrop-blur-md lg:flex">
+        <nav className="hidden items-center gap-6 rounded-full border border-line bg-bg/70 px-6 py-3 shadow-sm backdrop-blur-md xl:flex">
           {LINKS.map((link) => (
             <Link
               key={link.label}
               href={link.href}
-              className={`text-sm font-medium tracking-[1.4px] uppercase transition-colors hover:text-gold-deep ${
+              className={`text-[11px] font-semibold tracking-[1.4px] uppercase transition-colors hover:text-gold-deep ${
                 isActive(link) ? "text-gold-deep" : "text-text-muted"
               }`}
             >
@@ -50,12 +67,20 @@ export default function Navbar() {
           ))}
         </nav>
 
+        <Link
+          href="/#contact"
+          className="hidden items-center gap-2 border-b border-gold pb-1 text-xs font-semibold tracking-[1.4px] text-gold-deep uppercase transition-colors hover:text-text-primary xl:inline-flex"
+        >
+          Get a Valuation
+          <ArrowDownRightIcon className="h-4 w-4" />
+        </Link>
+
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
           aria-expanded={open}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-line bg-bg/70 shadow-sm backdrop-blur-md lg:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-line bg-bg/70 shadow-sm backdrop-blur-md xl:hidden"
         >
           <span className="sr-only">Menu</span>
           <div className="flex flex-col gap-1.5">
@@ -73,7 +98,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <nav className="mx-6 flex flex-col gap-1 rounded-2xl border border-line bg-bg/95 p-4 shadow-lg backdrop-blur-md lg:hidden">
+        <nav className="mx-6 flex flex-col gap-1 rounded-2xl border border-line bg-bg/95 p-4 shadow-lg backdrop-blur-md xl:hidden">
           {LINKS.map((link) => (
             <Link
               key={link.label}
@@ -86,6 +111,14 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          <Link
+            href="/#contact"
+            onClick={() => setOpen(false)}
+            className="mt-2 flex items-center justify-between rounded-lg bg-gold px-4 py-3 text-sm font-semibold tracking-[1.4px] text-white uppercase"
+          >
+            Get a Valuation
+            <ArrowDownRightIcon className="h-4 w-4" />
+          </Link>
         </nav>
       )}
     </header>
