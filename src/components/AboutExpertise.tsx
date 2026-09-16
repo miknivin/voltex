@@ -1,6 +1,6 @@
 import Image from "next/image";
 import expertiseImg from "../../public/images/about-expertise.png";
-import sectionVector from "../../public/images/section-vector.png";
+import GradientOrbs from "./GradientOrbs";
 
 const FACTORS = [
   "Authenticity and documentation.",
@@ -14,16 +14,11 @@ const FACTORS = [
 export default function AboutExpertise() {
   return (
     <section className="relative overflow-hidden py-14 lg:py-20">
-      <Image
-        src={sectionVector}
-        alt=""
-        aria-hidden
-        className="pointer-events-none absolute -top-24 -right-24 -z-10 w-150 max-w-none rotate-12 opacity-35 select-none lg:w-225"
-      />
+      <GradientOrbs variant="top-right" opacity={0.1} />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[2fr_3fr] lg:gap-16">
-          <div className="mx-auto w-full max-w-sm overflow-hidden rounded border border-white/5 bg-[rgba(30,32,32,0.6)] lg:max-w-none">
+          <div className="mx-auto w-full max-w-sm overflow-hidden rounded border border-line bg-card lg:max-w-none">
             <Image
               src={expertiseImg}
               alt="Detailed appraisal of a luxury asset"
@@ -35,7 +30,7 @@ export default function AboutExpertise() {
             <h2 className="font-display text-4xl font-bold text-text-primary sm:text-5xl">
               Expertise Before Estimation
             </h2>
-            <p className="mt-5 text-base leading-[26px] text-[#d0c5af]">
+            <p className="mt-5 text-base leading-[26px] text-text-muted">
               A luxury asset cannot be understood by weight or appearance
               alone. Its value may depend on multiple factors, including:
             </p>

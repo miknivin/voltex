@@ -1,17 +1,11 @@
 import type { Metadata } from "next";
-import { Roboto, Cormorant_Garamond } from "next/font/google";
+import { League_Spartan } from "next/font/google";
 import "./globals.css";
 
-const roboto = Roboto({
-  variable: "--font-roboto",
+const leagueSpartan = League_Spartan({
+  variable: "--font-league-spartan",
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
-});
-
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -22,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${roboto.variable} ${cormorant.variable}`}>
+    <html lang="en" className={leagueSpartan.variable}>
       <body className="bg-bg text-text-primary antialiased">{children}</body>
     </html>
   );

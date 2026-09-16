@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import logo from "../../public/images/nav-logo.png";
+import logo from "../../public/images/emerald-theme/VLTX Logo.png";
 
 const LINKS = [
   { label: "Home", href: "/" },
@@ -27,22 +27,22 @@ export default function Navbar() {
   return (
     <header className="absolute inset-x-0 top-0 z-50">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-10">
-        <Link href="/" className="shrink-0">
+        <Link href="/" className="flex shrink-0 items-center">
           <Image
             src={logo}
             alt="VLTX — Luxury Meets Liquidity"
             priority
-            className="h-9 w-auto lg:h-10"
+            className="h-9 w-auto lg:h-11"
           />
         </Link>
 
-        <nav className="hidden items-center gap-10 rounded-full border border-white/10 bg-pill px-6 py-3 backdrop-blur-sm lg:flex">
+        <nav className="hidden items-center gap-10 rounded-full border border-line bg-bg/70 px-6 py-3 shadow-sm backdrop-blur-md lg:flex">
           {LINKS.map((link) => (
             <Link
               key={link.label}
               href={link.href}
-              className={`text-sm font-medium tracking-[1.4px] uppercase transition-colors hover:text-gold ${
-                isActive(link) ? "text-gold" : "text-[#839ec5]"
+              className={`text-sm font-medium tracking-[1.4px] uppercase transition-colors hover:text-gold-deep ${
+                isActive(link) ? "text-gold-deep" : "text-text-muted"
               }`}
             >
               {link.label}
@@ -55,7 +55,7 @@ export default function Navbar() {
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
           aria-expanded={open}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-pill lg:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-line bg-bg/70 shadow-sm backdrop-blur-md lg:hidden"
         >
           <span className="sr-only">Menu</span>
           <div className="flex flex-col gap-1.5">
@@ -73,14 +73,14 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <nav className="mx-6 flex flex-col gap-1 rounded-2xl border border-white/10 bg-bg-deep/95 p-4 backdrop-blur-sm lg:hidden">
+        <nav className="mx-6 flex flex-col gap-1 rounded-2xl border border-line bg-bg/95 p-4 shadow-lg backdrop-blur-md lg:hidden">
           {LINKS.map((link) => (
             <Link
               key={link.label}
               href={link.href}
               onClick={() => setOpen(false)}
-              className={`rounded-lg px-4 py-3 text-sm font-medium tracking-[1.4px] uppercase transition-colors hover:bg-white/5 hover:text-gold ${
-                isActive(link) ? "text-gold" : "text-[#839ec5]"
+              className={`rounded-lg px-4 py-3 text-sm font-medium tracking-[1.4px] uppercase transition-colors hover:bg-line-soft hover:text-gold-deep ${
+                isActive(link) ? "text-gold-deep" : "text-text-muted"
               }`}
             >
               {link.label}

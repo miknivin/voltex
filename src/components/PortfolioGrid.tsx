@@ -1,5 +1,5 @@
 import Image, { type StaticImageData } from "next/image";
-import sectionVector from "../../public/images/section-vector.png";
+import GradientOrbs from "./GradientOrbs";
 
 export type PortfolioItem = {
   image: StaticImageData;
@@ -14,12 +14,7 @@ type PortfolioGridProps = {
 export default function PortfolioGrid({ items }: PortfolioGridProps) {
   return (
     <section id="portfolio" className="relative overflow-hidden pb-20 lg:pb-28">
-      <Image
-        src={sectionVector}
-        alt=""
-        aria-hidden
-        className="pointer-events-none absolute -top-20 -left-32 -z-10 w-325 max-w-none rotate-12 opacity-60 select-none lg:w-[1600px]"
-      />
+      <GradientOrbs variant="top-left" opacity={0.1} />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">

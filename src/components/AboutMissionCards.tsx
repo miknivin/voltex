@@ -1,5 +1,4 @@
-import Image from "next/image";
-import sectionVector from "../../public/images/section-vector.png";
+import GradientOrbs from "./GradientOrbs";
 
 const MISSION_ITEMS = [
   "Help asset owners understand the value they hold.",
@@ -37,20 +36,15 @@ function MissionIcon() {
 export default function AboutMissionCards() {
   return (
     <section className="relative overflow-hidden py-14 lg:py-20">
-      <Image
-        src={sectionVector}
-        alt=""
-        aria-hidden
-        className="pointer-events-none absolute -bottom-24 -right-56 -z-10 w-325 max-w-none -rotate-6 opacity-50 select-none lg:w-[1600px]"
-      />
+      <GradientOrbs variant="bottom-right" opacity={0.1} />
 
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-6 lg:grid-cols-2 lg:px-10">
-        <div className="rounded-lg border border-white/5 bg-[rgba(30,32,32,0.6)] p-10">
+        <div className="rounded-lg border border-line bg-card p-10">
           <VisionIcon />
           <h3 className="mt-4 font-display text-3xl leading-tight font-medium text-text-primary">
             Building the Future of Luxury Asset Liquidity
           </h3>
-          <p className="mt-4 text-base leading-[25.6px] text-[#d0c5af]">
+          <p className="mt-4 text-base leading-[25.6px] text-text-muted">
             VLTX aims to become a trusted name in the evaluation and
             financing of high-value luxury assets. Over time, we plan to
             strengthen our technology, expand our specialist network and
@@ -60,17 +54,17 @@ export default function AboutMissionCards() {
           </p>
         </div>
 
-        <div className="rounded-lg border border-white/5 bg-[rgba(30,32,32,0.6)] p-10">
+        <div className="rounded-lg border border-line bg-card p-10">
           <MissionIcon />
           <h3 className="mt-4 font-display text-3xl leading-tight font-medium text-text-primary">
             Make Value More Accessible
           </h3>
-          <p className="mt-4 text-base leading-[25.6px] text-[#d0c5af]">
+          <p className="mt-4 text-base leading-[25.6px] text-text-muted">
             Our mission is to:
           </p>
           <ul className="mt-3 flex flex-col gap-2">
             {MISSION_ITEMS.map((item) => (
-              <li key={item} className="flex gap-3 text-base leading-[25.6px] text-[#d0c5af]">
+              <li key={item} className="flex gap-3 text-base leading-[25.6px] text-text-muted">
                 <span className="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-gold" />
                 {item}
               </li>

@@ -1,5 +1,4 @@
-import Image from "next/image";
-import sectionVector from "../../public/images/section-vector.png";
+import GradientOrbs from "./GradientOrbs";
 
 type StorySectionProps = {
   kicker: string;
@@ -7,13 +6,6 @@ type StorySectionProps = {
   description?: string;
   items?: string[];
   decor?: "top-right" | "top-left" | "bottom-right" | "bottom-left" | "none";
-};
-
-const DECOR_CLASSES: Record<string, string> = {
-  "top-right": "-top-24 -right-40 rotate-6",
-  "top-left": "-top-24 -left-40 -rotate-6",
-  "bottom-right": "-bottom-24 -right-40 rotate-12",
-  "bottom-left": "-bottom-24 -left-40 -rotate-12",
 };
 
 export default function StorySection({
@@ -25,17 +17,10 @@ export default function StorySection({
 }: StorySectionProps) {
   return (
     <section className="relative overflow-hidden py-10">
-      {decor !== "none" && (
-        <Image
-          src={sectionVector}
-          alt=""
-          aria-hidden
-          className={`pointer-events-none absolute -z-10 w-150 max-w-none opacity-35 select-none lg:w-225 ${DECOR_CLASSES[decor]}`}
-        />
-      )}
+      {decor !== "none" && <GradientOrbs variant={decor} opacity={0.1} />}
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <p className="text-[15px] font-semibold tracking-[3.6px] text-gold uppercase">
+        <p className="text-[15px] font-semibold tracking-[3.6px] text-gold-deep uppercase">
           {kicker}
         </p>
         <h2 className="mt-3 font-display text-4xl leading-[1.15] font-semibold tracking-[-1.28px] text-text-primary sm:text-5xl lg:text-[50px]">

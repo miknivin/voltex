@@ -1,6 +1,6 @@
 import Image from "next/image";
-import sectionVector from "../../public/images/section-vector.png";
 import star from "../../public/icons/star.svg";
+import GradientOrbs from "./GradientOrbs";
 
 const TESTIMONIALS = [
   {
@@ -29,19 +29,14 @@ const TESTIMONIALS = [
 export default function Testimonials() {
   return (
     <section className="relative overflow-hidden py-20 lg:py-28">
-      <Image
-        src={sectionVector}
-        alt=""
-        aria-hidden
-        className="pointer-events-none absolute -top-16 left-[-10%] -z-10 w-325 max-w-none rotate-6 opacity-40 select-none lg:w-[1600px]"
-      />
+      <GradientOrbs variant="top-left" opacity={0.1} />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {TESTIMONIALS.map((t) => (
             <div
               key={t.name}
-              className="flex flex-col gap-8 rounded-2xl border border-white/5 bg-card p-10"
+              className="flex flex-col gap-8 rounded-2xl border border-line bg-card p-10"
             >
               <div className="flex gap-1">
                 {Array.from({ length: 5 }).map((_, i) => (
@@ -51,8 +46,8 @@ export default function Testimonials() {
               <p className="flex-1 text-base leading-6 text-text-secondary">
                 {t.quote}
               </p>
-              <div className="flex items-center gap-4 border-t border-white/5 pt-6">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gold-deep font-display text-base text-[#554300]">
+              <div className="flex items-center gap-4 border-t border-line pt-6">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gold-deep font-display text-base text-white">
                   {t.initial}
                 </div>
                 <div>

@@ -1,6 +1,6 @@
 import Image, { type StaticImageData } from "next/image";
 import type { ReactNode } from "react";
-import sectionVector from "../../public/images/section-vector.png";
+import GradientOrbs from "./GradientOrbs";
 
 type PageIntroProps = {
   kicker?: string;
@@ -16,24 +16,17 @@ export default function PageIntro({ kicker, heading, description, bannerImage }:
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(ellipse 70% 55% at 35% 15%, rgba(6,77,77,0.55) 0%, rgba(1,38,38,0) 70%)",
+            "radial-gradient(ellipse 70% 55% at 35% 15%, var(--color-line-soft) 0%, transparent 70%)",
         }}
       />
 
-      {!bannerImage && (
-        <Image
-          src={sectionVector}
-          alt=""
-          aria-hidden
-          className="pointer-events-none absolute -top-16 right-0 -z-10 w-325 max-w-none opacity-70 select-none lg:w-[1600px]"
-        />
-      )}
+      {!bannerImage && <GradientOrbs variant="top-right" opacity={0.14} />}
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className={bannerImage ? "grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16" : ""}>
           <div className="max-w-3xl">
             {kicker && (
-              <p className="text-xs font-bold tracking-[2.4px] text-gold uppercase">
+              <p className="text-xs font-bold tracking-[2.4px] text-gold-deep uppercase">
                 {kicker}
               </p>
             )}
@@ -42,7 +35,7 @@ export default function PageIntro({ kicker, heading, description, bannerImage }:
             >
               {heading}
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-[28.8px] tracking-[0.18px] text-[#d0c5af]">
+            <p className="mt-6 max-w-2xl text-lg leading-[28.8px] tracking-[0.18px] text-text-muted">
               {description}
             </p>
           </div>

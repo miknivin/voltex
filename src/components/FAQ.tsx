@@ -1,5 +1,4 @@
-import Image from "next/image";
-import sectionVector from "../../public/images/section-vector.png";
+import GradientOrbs from "./GradientOrbs";
 
 const FAQS = [
   {
@@ -37,16 +36,11 @@ const FAQS = [
 export default function FAQ() {
   return (
     <section id="faq" className="relative overflow-hidden py-20 lg:py-28">
-      <Image
-        src={sectionVector}
-        alt=""
-        aria-hidden
-        className="pointer-events-none absolute -top-24 right-[-8%] -z-10 w-325 max-w-none rotate-3 opacity-35 select-none lg:w-[1600px]"
-      />
+      <GradientOrbs variant="top-right" opacity={0.1} />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="flex flex-col items-center gap-4 text-center">
-          <p className="text-xs font-bold tracking-[3.6px] text-gold uppercase">
+          <p className="text-xs font-bold tracking-[3.6px] text-gold-deep uppercase">
             Common Questions
           </p>
           <h2 className="font-display text-4xl font-bold text-text-primary sm:text-5xl">
@@ -54,18 +48,18 @@ export default function FAQ() {
           </h2>
         </div>
 
-        <div className="mx-auto mt-12 max-w-3xl border-t border-white/5">
+        <div className="mx-auto mt-12 max-w-3xl border-t border-line">
           {FAQS.map((faq) => (
             <details
               key={faq.question}
-              className="group border-b border-white/5 py-5"
+              className="group border-b border-line py-5"
             >
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 font-display text-lg font-semibold text-text-primary transition-colors group-open:text-gold">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 font-display text-lg font-semibold text-text-primary transition-colors group-open:text-gold-deep">
                 {faq.question}
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
-                  className="h-4 w-4 shrink-0 text-gold transition-transform group-open:rotate-90"
+                  className="h-4 w-4 shrink-0 text-gold-deep transition-transform group-open:rotate-90"
                 >
                   <path
                     d="M9 6l6 6-6 6"

@@ -1,18 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import heroImageSide from "../../public/images/hero-image-side.png";
-import heroContentSide from "../../public/images/hero-content-side.png";
-import badgeValuation from "../../public/icons/badge-valuation.svg";
-import badgeSecure from "../../public/icons/badge-secure.svg";
-import badgeExpert from "../../public/icons/badge-expert.svg";
-import badgeLiquidity from "../../public/icons/badge-liquidity.svg";
+import heroImage from "../../public/images/emerald-theme/Hero.jpg";
+import GradientOrbs from "./GradientOrbs";
 
-const BADGES = [
-  { icon: badgeValuation, label: "Complimentary Valuation" },
-  { icon: badgeSecure, label: "Private and Secure" },
-  { icon: badgeExpert, label: "Expert-Led Assessment" },
-  { icon: badgeLiquidity, label: "Luxury Asset Liquidity" },
-];
+const CHIPS = ["Platinum", "Diamonds", "Precious Gem Stones & Jewellery", "Luxury Watches"];
 
 export default function Hero() {
   return (
@@ -21,84 +12,67 @@ export default function Hero() {
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(ellipse 70% 55% at 65% 20%, rgba(6,77,77,0.55) 0%, rgba(1,38,38,0) 70%)",
+            "radial-gradient(ellipse 70% 55% at 65% 20%, var(--color-line-soft) 0%, transparent 70%)",
         }}
       />
 
-      <Image
-        src={heroContentSide}
-        alt=""
-        aria-hidden
-        className="pointer-events-none absolute -top-16 -left-24 -z-10 w-150 max-w-none opacity-70 select-none lg:w-205"
-      />
+      <GradientOrbs variant="top-left" opacity={0.14} />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-[7fr_5fr] lg:gap-8">
-          <div className="relative z-10">
-            <p className="text-[15px] font-semibold tracking-[3.6px] text-gold uppercase">
-              Unlocking Asset Value
+        <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8">
+          <div className="relative z-10 text-center lg:text-left">
+            <p className="mb-6 flex items-center justify-center gap-3 text-[13px] font-semibold tracking-[3px] text-gold-deep uppercase lg:justify-start">
+              <span className="h-px w-8 bg-gold" />
+              Where Luxury Meets Liquidity
             </p>
 
-            <h1 className="mt-4 font-display text-6xl leading-[0.95] font-semibold tracking-[-1.28px] text-text-primary sm:text-7xl lg:text-[64px] xl:text-[85px] xl:leading-20">
-              Luxury Deserves its <span className="text-gold">True Value</span>
+            <h1 className="font-display text-5xl leading-[1.04] font-semibold tracking-[-1px] text-text-primary sm:text-6xl lg:text-[64px] xl:text-[76px]">
+              Luxury Deserves Its{" "}
+              <span className="text-gold-deep">True Value</span>
             </h1>
 
-            <p className="mt-6 max-w-lg text-[15px] leading-[21.8px] text-text-secondary">
-              VLTX is a trusted platform for evaluating and reselling high value
-              assets.
+            <p className="mx-auto mt-7 max-w-xl text-base leading-7 text-text-muted lg:mx-0">
+              VLTX offers expert valuation and a transparent way to unlock
+              the true value of your luxury assets.
             </p>
-            <ul className="mt-4 flex max-w-lg flex-col gap-2">
-              {[
-                "Platinum Jewellery",
-                "Diamond Jewellery",
-                "Precious Jewellery",
-                "Luxury watches",
-              ].map((item) => (
-                <li key={item} className="flex items-center gap-3 text-[15px] leading-[21.8px] text-text-secondary">
-                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
-                  {item}
-                </li>
-              ))}
-            </ul>
 
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <a
-                href="#services"
-                className="rounded-2xl border border-white/10 bg-[rgba(217,217,217,0.25)] px-4.5 py-3 text-sm font-medium tracking-[1.2px] text-[#b5e4e3] transition-colors hover:bg-[rgba(217,217,217,0.35)]"
-              >
-                Explore Our Services
-              </a>
+            <div className="mt-9 flex justify-center lg:justify-start">
               <Link
                 href="/contact"
-                className="rounded-2xl bg-gold px-6 py-3.5 text-sm font-medium tracking-[1.2px] text-[#3c2f00] transition-opacity hover:opacity-90"
+                className="inline-flex min-h-13 items-center gap-3 rounded-2xl bg-gold px-9 py-4 text-sm font-semibold tracking-[1.2px] text-white uppercase shadow-lg transition-opacity hover:opacity-90"
               >
-                Request a Free Valuation
+                Get a Valuation
               </Link>
             </div>
+
+            <p className="mt-5 text-[11px] tracking-[2px] text-text-mutedmore uppercase">
+              Confidential · Expert valued · Secure completion
+            </p>
+
+            <span className="gold-rule mt-10 block h-px w-40 bg-gradient-to-r from-transparent via-gold to-transparent lg:mx-0" />
+
+            <div className="mt-6 flex flex-wrap justify-center gap-x-7 gap-y-3 text-xs tracking-[1.4px] text-text-secondary uppercase lg:justify-start">
+              {CHIPS.map((item) => (
+                <span key={item} className="flex items-center gap-2">
+                  <span className="h-1.5 w-1.5 rotate-45 bg-gold" />
+                  {item}
+                </span>
+              ))}
+            </div>
           </div>
 
-          <div className="relative z-10 mx-auto w-full max-w-lg lg:max-w-none">
+          <div className="relative z-10 mx-auto w-full max-w-xl lg:max-w-none">
+            <div
+              className="pointer-events-none absolute -inset-3 border border-gold/40"
+              aria-hidden
+            />
             <Image
-              src={heroImageSide}
-              alt="Gold Rolex Deepsea watch"
+              src={heroImage}
+              alt="Platinum rings, diamond pendant, gemstone jewellery and a luxury watch on a steel surface"
               priority
-              className="w-full"
+              className="relative aspect-5/4 w-full border-2 border-line object-cover"
             />
           </div>
-        </div>
-
-        <div className="relative z-10 mt-14 grid grid-cols-2 gap-4 sm:flex sm:items-stretch sm:gap-5">
-          {BADGES.map((badge) => (
-            <div
-              key={badge.label}
-              className="flex flex-1 items-center justify-center gap-2 rounded-full border border-white/5 bg-pill px-4 py-2.5"
-            >
-              <Image src={badge.icon} alt="" className="h-4 w-auto shrink-0" />
-              <span className="text-sm font-medium whitespace-nowrap text-text-primary">
-                {badge.label}
-              </span>
-            </div>
-          ))}
         </div>
       </div>
     </section>

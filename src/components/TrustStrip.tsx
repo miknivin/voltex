@@ -63,12 +63,12 @@ const VALUES = [
 
 export default function TrustStrip() {
   return (
-    <section className="relative overflow-hidden border-y border-white/5 bg-card">
+    <section className="relative overflow-hidden border-y border-line bg-card">
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-px px-6 sm:grid-cols-4 lg:px-10">
         {VALUES.map(({ icon: Icon, label }) => (
           <div
             key={label}
-            className="flex min-h-24 items-center justify-center gap-3 border-l border-white/5 px-4 first:border-l-0 sm:px-6"
+            className="flex min-h-24 items-center justify-center gap-3 border-l border-line px-4 first:border-l-0 sm:px-6"
           >
             <Icon />
             <span className="text-xs font-bold tracking-[1.4px] text-text-primary uppercase">

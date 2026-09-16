@@ -1,18 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --color-bg: #012626;
-  --color-bg-deep: #001a1a;
-  --color-bg-band: #062d2f;
-  --color-card: rgba(0, 43, 43, 0.4);
-  --color-pill: rgba(217, 217, 217, 0.1);
-  --color-gold: #f2ca50;
-  --color-gold-deep: #d4af37;
-  --color-text-primary: #e2e2e4;
-  --color-text-secondary: #cbd5e1;
-  --color-text-muted: #94a3b8;
-  --color-text-mutedmore: #64748b;
-  --color-positive: #4ade80;
+  --color-bg: oklch(1 0 0);
+  --color-bg-deep: oklch(0.975 0.012 196);
+  --color-bg-band: oklch(0.66 0.13 196);
+  --color-card: oklch(0.978 0.014 196);
+  --color-pill: oklch(0.55 0.125 196 / 10%);
+  --color-gold: oklch(0.66 0.13 196);
+  --color-gold-deep: oklch(0.55 0.125 196);
+  --color-text-primary: oklch(0.24 0.06 196);
+  --color-text-secondary: oklch(0.35 0.05 196);
+  --color-text-muted: oklch(0.5 0.045 196);
+  --color-text-mutedmore: oklch(0.62 0.04 196);
+  --color-positive: #16a34a;
+  --color-line: oklch(0.55 0.125 196 / 14%);
+  --color-line-soft: oklch(0.55 0.125 196 / 8%);
+  --color-on-band: oklch(1 0 0);
 }
 
 @theme inline {
@@ -28,12 +31,30 @@
   --color-text-muted: var(--color-text-muted);
   --color-text-mutedmore: var(--color-text-mutedmore);
   --color-positive: var(--color-positive);
-  --font-display: var(--font-cormorant);
-  --font-body: var(--font-roboto);
+  --color-line: var(--color-line);
+  --color-line-soft: var(--color-line-soft);
+  --color-on-band: var(--color-on-band);
+  --font-display: var(--font-league-spartan);
+  --font-body: var(--font-league-spartan);
 }
 
 body {
   background: var(--color-bg);
   color: var(--color-text-primary);
   font-family: var(--font-body), sans-serif;
+  letter-spacing: 0;
+}
+
+h1, h2, h3 {
+  text-transform: uppercase;
+}
+
+@keyframes orb-drift-a {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(4%, 6%) scale(1.08); }
+}
+
+@keyframes orb-drift-b {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-5%, -4%) scale(1.05); }
 }

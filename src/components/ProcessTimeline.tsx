@@ -1,6 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
-import sectionVector from "../../public/images/section-vector.png";
+import GradientOrbs from "./GradientOrbs";
 
 const STEPS = [
   {
@@ -39,27 +38,22 @@ const STEPS = [
 export default function ProcessTimeline() {
   return (
     <section className="relative overflow-hidden py-20 lg:py-28">
-      <Image
-        src={sectionVector}
-        alt=""
-        aria-hidden
-        className="pointer-events-none absolute top-1/3 -left-64 -z-10 w-325 max-w-none rotate-12 opacity-50 select-none lg:w-[1600px]"
-      />
+      <GradientOrbs variant="top-left" opacity={0.1} />
 
       <div className="mx-auto flex max-w-3xl flex-col gap-20 px-6 lg:px-10">
         {STEPS.map((step) => (
           <div key={step.title} className="flex flex-col items-center gap-2 text-center">
-            <div className="flex h-8.5 w-12 items-center justify-center bg-[#121414] text-lg font-bold text-gold">
+            <div className="flex h-8.5 w-12 items-center justify-center rounded-lg border border-gold/40 bg-card text-lg font-bold text-gold-deep">
               {step.number}
             </div>
             <h2 className="mt-4 font-display text-3xl leading-[1.3] font-semibold text-text-primary">
               {step.title}
             </h2>
-            <p className="mt-2 max-w-2xl text-base leading-6 text-[#d0c5af]">
+            <p className="mt-2 max-w-2xl text-base leading-6 text-text-muted">
               {step.description}
             </p>
             {step.badge && (
-              <div className="mt-4 flex items-center gap-4 rounded-2xl border border-white/5 bg-[rgba(30,32,32,0.6)] px-4 py-4">
+              <div className="mt-4 flex items-center gap-4 rounded-2xl border border-line bg-card px-4 py-4">
                 <svg
                   viewBox="0 0 20 20"
                   fill="none"
@@ -82,12 +76,12 @@ export default function ProcessTimeline() {
         ))}
 
         <div className="flex flex-col items-center gap-4 text-center">
-          <p className="text-base leading-6 text-[#d0c5af]">
+          <p className="text-base leading-6 text-text-muted">
             Ready to find out what your asset is worth?
           </p>
           <Link
             href="/contact"
-            className="rounded-2xl bg-gradient-to-r from-gold to-gold-deep px-10 py-4 text-xs font-bold tracking-[1.2px] text-[#3c2f00] uppercase transition-opacity hover:opacity-90"
+            className="rounded-2xl bg-gradient-to-r from-gold to-gold-deep px-10 py-4 text-xs font-bold tracking-[1.2px] text-white uppercase transition-opacity hover:opacity-90"
           >
             Request an Evaluation
           </Link>

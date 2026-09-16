@@ -1,5 +1,4 @@
-import Image from "next/image";
-import sectionVector from "../../public/images/section-vector.png";
+import GradientOrbs from "./GradientOrbs";
 
 function PortraitPlaceholder() {
   return (
@@ -18,16 +17,11 @@ function PortraitPlaceholder() {
 export default function Leadership() {
   return (
     <section className="relative overflow-hidden py-16 lg:py-20">
-      <Image
-        src={sectionVector}
-        alt=""
-        aria-hidden
-        className="pointer-events-none absolute -bottom-24 left-[-10%] -z-10 w-325 max-w-none -rotate-6 opacity-35 select-none lg:w-[1600px]"
-      />
+      <GradientOrbs variant="bottom-left" opacity={0.1} />
 
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:grid-cols-[minmax(0,1fr)_2fr] lg:gap-16 lg:px-10">
         <div className="max-w-sm">
-          <p className="text-xs font-bold tracking-[3.6px] text-gold uppercase">
+          <p className="text-xs font-bold tracking-[3.6px] text-gold-deep uppercase">
             Leadership
           </p>
           <h2 className="mt-6 font-display text-4xl font-bold text-text-primary sm:text-5xl">
@@ -38,20 +32,20 @@ export default function Leadership() {
         <div className="grid gap-8 sm:grid-cols-[14rem_1fr] sm:items-start">
           <div className="relative mx-auto w-full max-w-56 sm:mx-0">
             <div className="absolute -inset-2 border border-gold/30" aria-hidden="true" />
-            <div className="relative grid aspect-4/5 w-full place-items-center rounded border border-white/5 bg-[rgba(30,32,32,0.6)]">
+            <div className="relative grid aspect-4/5 w-full place-items-center rounded border border-line bg-card">
               <PortraitPlaceholder />
               <span className="sr-only">Founder and Chairman portrait to be added</span>
             </div>
           </div>
 
-          <div className="border-t border-white/5 pt-6 sm:border-t-0 sm:pt-0">
+          <div className="border-t border-line pt-6 sm:border-t-0 sm:pt-0">
             <blockquote className="border-l-2 border-gold pl-5 font-display text-xl leading-snug font-semibold text-text-primary sm:text-2xl">
               &ldquo;To be the trusted bridge between luxury and liquidity.&rdquo;
             </blockquote>
             <h3 className="mt-8 font-display text-xl font-semibold text-text-primary">
               Samar Mukundhan
             </h3>
-            <p className="mt-2 text-xs font-bold tracking-[2px] text-gold uppercase">
+            <p className="mt-2 text-xs font-bold tracking-[2px] text-gold-deep uppercase">
               Founder &amp; Chairman · VLTX · LuxVault
             </p>
             <div className="mt-5 flex flex-col gap-4 text-base leading-7 text-text-muted">
