@@ -56,7 +56,7 @@ export default function HowItWorks() {
           </p>
         </div>
 
-        <ol className="relative border-l border-gold/40 pl-8 sm:pl-12">
+        <ol className="relative border-l border-gold/40 pt-6 pl-8 sm:pl-12">
           {STEPS.map((step) => (
             <li key={step.number} className="relative pb-10 last:pb-0">
               <span
