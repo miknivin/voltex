@@ -1,4 +1,5 @@
-import GradientOrbs from "./GradientOrbs";
+import Image from "next/image";
+import sectionVector from "../../public/images/section-vector.png";
 import CompanyFacts from "./CompanyFacts";
 
 const PILLARS = [
@@ -15,8 +16,13 @@ const PILLARS = [
 
 export default function AboutVltxTeaser() {
   return (
-    <section className="relative overflow-hidden bg-bg-band py-20 text-white lg:py-28">
-      <GradientOrbs variant="wide" opacity={0.1} />
+    <section className="relative z-0 overflow-hidden bg-bg-band py-20 text-white lg:py-28">
+      <Image
+        src={sectionVector}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute -bottom-20 left-[-8%] -z-10 w-325 max-w-none rotate-3 opacity-40 select-none lg:w-[1600px]"
+      />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
         <p className="eyebrow text-white/80">About VLTX</p>

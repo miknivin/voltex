@@ -3,7 +3,7 @@ import officeIcon from "../../public/icons/contact-office.svg";
 import phoneIcon from "../../public/icons/contact-phone.svg";
 import emailIcon from "../../public/icons/contact-email.svg";
 import hoursIcon from "../../public/icons/contact-hours.svg";
-import GradientOrbs from "./GradientOrbs";
+import sectionVector from "../../public/images/section-vector.png";
 
 const CARDS = [
   {
@@ -34,7 +34,12 @@ const CARDS = [
 export default function ContactInfo() {
   return (
     <section className="relative overflow-hidden pb-20 lg:pb-28">
-      <GradientOrbs variant="bottom-left" opacity={0.1} />
+      <Image
+        src={sectionVector}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute -bottom-32 -left-64 -z-10 w-325 max-w-none rotate-12 opacity-50 select-none lg:w-[1600px]"
+      />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">

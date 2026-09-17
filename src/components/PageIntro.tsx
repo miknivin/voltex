@@ -1,6 +1,6 @@
 import Image, { type StaticImageData } from "next/image";
 import type { ReactNode } from "react";
-import GradientOrbs from "./GradientOrbs";
+import sectionVector from "../../public/images/section-vector.png";
 
 type PageIntroProps = {
   kicker?: string;
@@ -20,7 +20,14 @@ export default function PageIntro({ kicker, heading, description, bannerImage }:
         }}
       />
 
-      {!bannerImage && <GradientOrbs variant="top-right" opacity={0.14} />}
+      {!bannerImage && (
+        <Image
+          src={sectionVector}
+          alt=""
+          aria-hidden
+          className="pointer-events-none absolute -top-16 right-0 -z-10 w-325 max-w-none opacity-70 select-none lg:w-[1600px]"
+        />
+      )}
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className={bannerImage ? "grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16" : ""}>

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import ContactForm from "@/components/ContactForm";
 import ContactInfo from "@/components/ContactInfo";
 import Footer from "@/components/Footer";
-import GradientOrbs from "@/components/GradientOrbs";
+import sectionVector from "../../../public/images/section-vector.png";
 
 export const metadata: Metadata = {
   title: "Contact VLTX | Luxury Meets Liquidity",
@@ -24,7 +25,12 @@ export default function ContactPage() {
                 "radial-gradient(ellipse 70% 55% at 35% 15%, var(--color-line-soft) 0%, transparent 70%)",
             }}
           />
-          <GradientOrbs variant="top-right" opacity={0.14} />
+          <Image
+            src={sectionVector}
+            alt=""
+            aria-hidden
+            className="pointer-events-none absolute -top-16 right-0 -z-10 w-325 max-w-none opacity-70 select-none lg:w-[1600px]"
+          />
 
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-[2fr_3fr] lg:gap-16">

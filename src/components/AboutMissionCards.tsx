@@ -1,4 +1,5 @@
-import GradientOrbs from "./GradientOrbs";
+import Image from "next/image";
+import sectionVector from "../../public/images/section-vector.png";
 
 const MISSION_ITEMS = [
   "Help asset owners understand the value they hold.",
@@ -36,7 +37,12 @@ function MissionIcon() {
 export default function AboutMissionCards() {
   return (
     <section className="relative overflow-hidden py-14 lg:py-20">
-      <GradientOrbs variant="bottom-right" opacity={0.1} />
+      <Image
+        src={sectionVector}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute -bottom-24 -right-56 -z-10 w-325 max-w-none -rotate-6 opacity-50 select-none lg:w-[1600px]"
+      />
 
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-6 lg:grid-cols-2 lg:px-10">
         <div className="rounded-lg border border-line bg-card p-10">

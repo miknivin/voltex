@@ -1,4 +1,5 @@
-import GradientOrbs from "./GradientOrbs";
+import Image from "next/image";
+import sectionVector from "../../public/images/section-vector.png";
 
 const LTV_RATIOS = [
   { label: "Watches", value: 85 },
@@ -14,7 +15,12 @@ const MARKET_INDEX = [44, 61, 50, 78, 100];
 export default function DataAnalytics() {
   return (
     <section className="relative overflow-hidden py-20 lg:py-28">
-      <GradientOrbs variant="bottom-right" opacity={0.12} />
+      <Image
+        src={sectionVector}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute -bottom-24 right-0 -z-10 w-325 max-w-none -rotate-6 opacity-60 select-none lg:w-[1600px]"
+      />
 
       <div className="mx-auto max-w-5xl px-6 text-center lg:px-10">
         <p className="eyebrow justify-center text-gold-deep">

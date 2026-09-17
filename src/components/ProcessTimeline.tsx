@@ -1,5 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
-import GradientOrbs from "./GradientOrbs";
+import sectionVector from "../../public/images/section-vector.png";
 
 const STEPS = [
   {
@@ -38,7 +39,12 @@ const STEPS = [
 export default function ProcessTimeline() {
   return (
     <section className="relative overflow-hidden py-20 lg:py-28">
-      <GradientOrbs variant="top-left" opacity={0.1} />
+      <Image
+        src={sectionVector}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute top-1/3 -left-64 -z-10 w-325 max-w-none rotate-12 opacity-50 select-none lg:w-[1600px]"
+      />
 
       <div className="mx-auto flex max-w-3xl flex-col gap-20 px-6 lg:px-10">
         {STEPS.map((step) => (
@@ -81,7 +87,7 @@ export default function ProcessTimeline() {
           </p>
           <Link
             href="/contact"
-            className="rounded-2xl bg-gradient-to-r from-gold to-gold-deep px-10 py-4 text-xs font-bold tracking-[1.2px] text-white uppercase transition-opacity hover:opacity-90"
+            className="rounded-2xl bg-gradient-to-r from-gold to-gold-deep px-10 py-4 text-xs font-bold tracking-[1.2px] text-[#3c2f00] uppercase transition-opacity hover:opacity-90"
           >
             Request an Evaluation
           </Link>

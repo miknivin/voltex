@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import logo from "../../public/images/emerald-theme/VLTX Logo.png";
+import logo from "../../public/images/nav-logo.png";
 
 const LINKS = [
   { label: "Home", href: "/" },
@@ -113,7 +113,7 @@ export default function Navbar() {
           <Link
             href="/#contact"
             onClick={() => setOpen(false)}
-            className="mt-2 flex items-center justify-between rounded-lg bg-gold px-4 py-3 text-sm font-semibold tracking-[1.4px] text-white uppercase"
+            className="mt-2 flex items-center justify-between rounded-lg bg-gold px-4 py-3 text-sm font-semibold tracking-[1.4px] text-[#3c2f00] uppercase"
           >
             Get a Valuation
             <ArrowDownRightIcon className="h-4 w-4" />

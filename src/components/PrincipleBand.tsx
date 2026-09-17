@@ -1,4 +1,5 @@
-import GradientOrbs from "./GradientOrbs";
+import Image from "next/image";
+import sectionVector from "../../public/images/section-vector.png";
 
 type Step = {
   number: string;
@@ -26,7 +27,12 @@ export default function PrincipleBand({
       id={id}
       className="relative z-0 overflow-hidden border-y border-line bg-bg-band py-20 text-white lg:py-28"
     >
-      <GradientOrbs variant="top-left" opacity={0.12} />
+      <Image
+        src={sectionVector}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute -top-16 left-[-10%] -z-10 w-325 max-w-none rotate-6 opacity-40 select-none lg:w-[1600px]"
+      />
 
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-14 px-6 lg:grid-cols-[minmax(0,1fr)_2fr] lg:gap-16 lg:px-10">
         <div className="max-w-sm">

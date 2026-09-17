@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import heroImage from "../../public/images/emerald-theme/Hero.jpg";
-import GradientOrbs from "./GradientOrbs";
+import heroContentSide from "../../public/images/hero-content-side.png";
 
 const CHIPS = ["Platinum", "Diamonds", "Precious Gem Stones & Jewellery", "Luxury Watches"];
 
@@ -16,7 +16,12 @@ export default function Hero() {
         }}
       />
 
-      <GradientOrbs variant="top-left" opacity={0.14} />
+      <Image
+        src={heroContentSide}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute -top-16 -left-24 -z-10 w-150 max-w-none opacity-70 select-none lg:w-205"
+      />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8">
@@ -39,7 +44,7 @@ export default function Hero() {
             <div className="mt-9 flex justify-center lg:justify-start">
               <Link
                 href="/contact"
-                className="inline-flex min-h-13 items-center gap-3 rounded-2xl bg-gold px-9 py-4 text-sm font-semibold tracking-[1.2px] text-white uppercase shadow-lg transition-opacity hover:opacity-90"
+                className="inline-flex min-h-13 items-center gap-3 rounded-2xl bg-gold px-9 py-4 text-sm font-semibold tracking-[1.2px] text-[#3c2f00] uppercase shadow-lg transition-opacity hover:opacity-90"
               >
                 Get a Valuation
               </Link>

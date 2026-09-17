@@ -4,7 +4,7 @@ import platinumImg from "../../public/images/emerald-theme/Platinum.jpg";
 import diamondImg from "../../public/images/emerald-theme/Certified Diamonds & Diamond Jewellery.jpg";
 import gemstoneImg from "../../public/images/emerald-theme/Precious Gem Stones & Jewellery.jpg";
 import watchImg from "../../public/images/emerald-theme/Luxury Watches.jpg";
-import GradientOrbs from "./GradientOrbs";
+import sectionVector from "../../public/images/section-vector.png";
 
 const CATEGORIES = [
   {
@@ -36,7 +36,12 @@ const CATEGORIES = [
 export default function WhatWeValue() {
   return (
     <section id="assets" className="relative py-20 lg:py-28">
-      <GradientOrbs variant="bottom-right" opacity={0.12} />
+      <Image
+        src={sectionVector}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute -top-40 right-0 -z-10 w-375 max-w-none opacity-40 select-none lg:-top-56 lg:w-[1900px]"
+      />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="mb-14 grid gap-8 lg:grid-cols-2 lg:items-end">

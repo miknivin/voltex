@@ -4,11 +4,11 @@ import Image from "next/image";
 import { useState, type FormEvent } from "react";
 import attachIcon from "../../public/icons/attach-paperclip.svg";
 
-const labelClasses = "text-xs font-bold tracking-[1.8px] text-text-mutedmore uppercase";
+const labelClasses = "text-xs font-bold tracking-[1.8px] text-[#99907c] uppercase";
 const inputClasses =
-  "w-full rounded-sm border border-line bg-bg px-3.5 py-3 text-base text-text-primary placeholder:text-text-mutedmore outline-none focus:border-gold";
+  "w-full rounded-sm bg-white px-3.5 py-3 text-base text-gray-800 placeholder:text-gray-500 outline-none";
 const selectClasses =
-  "w-full rounded-sm border border-line bg-bg px-3 py-3 text-base text-text-primary outline-none focus:border-gold";
+  "w-full rounded-sm border border-white/10 bg-transparent px-3 py-3 text-base text-[#d0c5af] outline-none";
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -27,14 +27,14 @@ export default function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="flex flex-col items-center justify-center gap-3 rounded-sm border border-line bg-card px-8 py-20 text-center">
-        <p className="text-xs font-bold tracking-[3.6px] text-gold-deep uppercase">
+      <div className="flex flex-col items-center justify-center gap-3 rounded-sm bg-[rgba(10,10,10,0.6)] px-8 py-20 text-center">
+        <p className="text-xs font-bold tracking-[3.6px] text-[#d4af37] uppercase">
           Submission Received
         </p>
-        <h3 className="font-display text-3xl font-semibold text-text-primary">
+        <h3 className="font-display text-3xl font-semibold text-white">
           Thank You
         </h3>
-        <p className="max-w-sm text-base leading-6 text-text-muted">
+        <p className="max-w-sm text-base leading-6 text-[#d0c5af]">
           Your enquiry has been routed through our secure gateway. A member
           of our private client team will contact you shortly.
         </p>
@@ -46,7 +46,7 @@ export default function ContactForm() {
     <form
       onSubmit={handleSubmit}
       aria-busy={submitting}
-      className="flex flex-col gap-6 rounded-sm border border-line bg-card p-8 sm:p-12"
+      className="flex flex-col gap-6 rounded-sm bg-[rgba(10,10,10,0.6)] p-8 sm:p-12"
     >
       <fieldset disabled={submitting} className="contents">
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -157,17 +157,17 @@ export default function ContactForm() {
           name="message"
           rows={4}
           placeholder="Provide preliminary details. Do not include sensitive account numbers here."
-          className={`${inputClasses} resize-none`}
+          className="w-full resize-none rounded-sm bg-white/[0.03] px-3 py-3 text-base text-gray-400 placeholder:text-gray-500 outline-none"
         />
       </div>
 
       </fieldset>
 
-      <div className="flex flex-col items-stretch gap-4 border-t border-line pt-6 sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-col items-stretch gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
         <button
           type="button"
           disabled={submitting}
-          className="flex items-center justify-center gap-2 rounded-sm border border-line px-6 py-3 text-base text-gold-deep transition-colors hover:bg-line-soft disabled:opacity-50"
+          className="flex items-center justify-center gap-2 rounded-sm border border-white/10 px-6 py-3 text-base text-[#d4af37] transition-colors hover:bg-white/5 disabled:opacity-50"
         >
           <Image src={attachIcon} alt="" className="h-3 w-auto" />
           Attach Certificates
@@ -175,10 +175,10 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={submitting}
-          className="flex items-center justify-center gap-2 rounded-sm bg-gold px-8 py-3 text-base font-bold text-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-70"
+          className="flex items-center justify-center gap-2 rounded-sm bg-[#d4af37] px-8 py-3 text-base font-bold text-[#0a0a0a] transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-70"
         >
           {submitting && (
-            <span className="h-4 w-4 animate-spin rounded-full border-2 border-white/40 border-t-white" />
+            <span className="h-4 w-4 animate-spin rounded-full border-2 border-[#0a0a0a]/30 border-t-[#0a0a0a]" />
           )}
           {submitting ? "Submitting..." : "Request Private Consultation"}
         </button>

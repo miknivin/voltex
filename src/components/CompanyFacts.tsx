@@ -1,4 +1,5 @@
-import GradientOrbs from "./GradientOrbs";
+import Image from "next/image";
+import sectionVector from "../../public/images/section-vector.png";
 
 const FACTS = [
   { label: "Legal Name", value: "LuxVault" },
@@ -40,7 +41,12 @@ export default function CompanyFacts({ onBand = false }: CompanyFactsProps) {
 
   return (
     <section className="relative overflow-hidden py-10">
-      <GradientOrbs variant="top-right" opacity={0.1} />
+      <Image
+        src={sectionVector}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute -top-20 right-[-12%] -z-10 w-150 max-w-none rotate-6 opacity-35 select-none lg:w-225"
+      />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <dl className="grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-2 lg:grid-cols-5">

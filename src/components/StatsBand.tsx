@@ -1,4 +1,5 @@
-import GradientOrbs from "./GradientOrbs";
+import Image from "next/image";
+import sectionVector from "../../public/images/section-vector.png";
 
 const CATEGORIES = [
   "Platinum",
@@ -9,8 +10,13 @@ const CATEGORIES = [
 
 export default function StatsBand() {
   return (
-    <section className="relative overflow-hidden border-y border-line bg-bg-band py-14 text-white">
-      <GradientOrbs variant="bottom-left" opacity={0.12} />
+    <section className="relative z-0 overflow-hidden border-y border-line bg-bg-band py-14 text-white">
+      <Image
+        src={sectionVector}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute -bottom-24 left-1/3 -z-10 w-325 max-w-none -rotate-3 opacity-30 select-none lg:w-[1600px]"
+      />
 
       <div className="mx-auto grid max-w-7xl gap-10 px-6 sm:grid-cols-2 lg:grid-cols-4 lg:px-10">
         <div className="border-l border-white/40 pl-5">

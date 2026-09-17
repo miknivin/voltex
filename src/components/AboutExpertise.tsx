@@ -1,6 +1,6 @@
 import Image from "next/image";
 import expertiseImg from "../../public/images/about-expertise.png";
-import GradientOrbs from "./GradientOrbs";
+import sectionVector from "../../public/images/section-vector.png";
 
 const FACTORS = [
   "Authenticity and documentation.",
@@ -14,7 +14,12 @@ const FACTORS = [
 export default function AboutExpertise() {
   return (
     <section className="relative overflow-hidden py-14 lg:py-20">
-      <GradientOrbs variant="top-right" opacity={0.1} />
+      <Image
+        src={sectionVector}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute -top-24 -right-24 -z-10 w-150 max-w-none rotate-12 opacity-35 select-none lg:w-225"
+      />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[2fr_3fr] lg:gap-16">

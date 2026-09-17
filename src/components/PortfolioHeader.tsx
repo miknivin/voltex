@@ -1,5 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
-import GradientOrbs from "./GradientOrbs";
+import sectionVector from "../../public/images/section-vector.png";
 
 type PortfolioHeaderProps = {
   kicker?: string;
@@ -26,7 +27,12 @@ export default function PortfolioHeader({
         }}
       />
 
-      <GradientOrbs variant="top-right" opacity={0.14} />
+      <Image
+        src={sectionVector}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute -top-16 right-0 -z-10 w-325 max-w-none opacity-70 select-none lg:w-[1600px]"
+      />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">

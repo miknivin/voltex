@@ -1,4 +1,5 @@
-import GradientOrbs from "./GradientOrbs";
+import Image from "next/image";
+import sectionVector from "../../public/images/section-vector.png";
 
 const STEPS = [
   {
@@ -32,9 +33,14 @@ export default function HowItWorks() {
   return (
     <section
       id="process"
-      className="relative overflow-hidden border-y border-line bg-card py-20 lg:py-28"
+      className="relative z-0 overflow-hidden border-y border-line bg-card py-20 lg:py-28"
     >
-      <GradientOrbs variant="top-left" opacity={0.12} />
+      <Image
+        src={sectionVector}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute -top-24 -right-40 -z-10 w-325 max-w-none rotate-6 opacity-45 select-none lg:w-[1600px]"
+      />
 
       <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-[0.75fr_1.25fr] lg:px-10">
         <div className="lg:sticky lg:top-24 lg:self-start">

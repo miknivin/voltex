@@ -1,4 +1,5 @@
-import GradientOrbs from "./GradientOrbs";
+import Image from "next/image";
+import sectionVector from "../../public/images/section-vector.png";
 
 const REASONS = [
   {
@@ -35,7 +36,12 @@ const REASONS = [
 export default function WhyVltx() {
   return (
     <section id="why-vltx" className="relative overflow-hidden py-20 lg:py-28">
-      <GradientOrbs variant="center" opacity={0.12} />
+      <Image
+        src={sectionVector}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute top-0 left-1/2 -z-10 w-325 max-w-none -translate-x-1/2 opacity-35 select-none lg:w-[1600px]"
+      />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="mb-12 max-w-2xl">

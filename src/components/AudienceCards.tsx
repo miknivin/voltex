@@ -1,4 +1,5 @@
-import GradientOrbs from "./GradientOrbs";
+import Image from "next/image";
+import sectionVector from "../../public/images/section-vector.png";
 
 type Audience = {
   kicker: string;
@@ -13,7 +14,12 @@ type AudienceCardsProps = {
 export default function AudienceCards({ audiences }: AudienceCardsProps) {
   return (
     <section className="relative overflow-hidden py-10">
-      <GradientOrbs variant="top-right" opacity={0.1} />
+      <Image
+        src={sectionVector}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute -top-24 -right-40 -z-10 w-150 max-w-none rotate-6 opacity-35 select-none lg:w-225"
+      />
 
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="flex flex-col gap-6 lg:flex-row">

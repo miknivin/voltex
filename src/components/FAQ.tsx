@@ -1,4 +1,5 @@
-import GradientOrbs from "./GradientOrbs";
+import Image from "next/image";
+import sectionVector from "../../public/images/section-vector.png";
 
 const FAQS = [
   {
@@ -36,7 +37,12 @@ const FAQS = [
 export default function FAQ() {
   return (
     <section id="faq" className="relative overflow-hidden py-20 lg:py-28">
-      <GradientOrbs variant="top-right" opacity={0.1} />
+      <Image
+        src={sectionVector}
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute -top-24 right-[-8%] -z-10 w-325 max-w-none rotate-3 opacity-35 select-none lg:w-[1600px]"
+      />
 
       <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-10">
         <div>
