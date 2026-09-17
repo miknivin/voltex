@@ -65,24 +65,22 @@ export default function HowItWorks() {
               >
                 <span className="size-1.5 rotate-45 bg-gold" />
               </span>
-              <div className="flex items-start justify-between gap-6">
-                <div>
-                  <p className="text-xs font-bold tracking-[2px] text-gold-deep">
-                    {step.number}
-                  </p>
-                  <h3 className="mt-2 font-display text-lg font-semibold text-text-primary sm:text-xl">
-                    {step.title}
-                  </h3>
-                  <p className="mt-2 max-w-lg text-sm leading-6 text-text-muted">
-                    {step.description}
-                  </p>
-                </div>
+              <div className="relative z-0">
                 <span
-                  className="pointer-events-none hidden shrink-0 font-display text-6xl leading-none font-semibold text-gold/15 select-none sm:block sm:text-7xl"
+                  className="pointer-events-none absolute -top-4 -left-1 -z-10 hidden font-display text-6xl leading-none font-semibold text-gold/15 select-none sm:block sm:text-7xl"
                   aria-hidden="true"
                 >
                   {step.number}
                 </span>
+                <p className="text-xs font-bold tracking-[2px] text-gold-deep">
+                  {step.number}
+                </p>
+                <h3 className="mt-2 font-display text-lg font-semibold text-text-primary sm:text-xl">
+                  {step.title}
+                </h3>
+                <p className="mt-2 max-w-lg text-sm leading-6 text-text-muted">
+                  {step.description}
+                </p>
               </div>
             </li>
           ))}
