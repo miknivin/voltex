@@ -67,7 +67,7 @@ export default function HowItWorks() {
               </span>
               <div className="relative z-0">
                 <span
-                  className="pointer-events-none absolute -top-4 -left-1 -z-10 hidden font-display text-6xl leading-none font-semibold text-gold/15 select-none sm:block sm:text-7xl"
+                  className="pointer-events-none absolute -top-4 left-full -z-10 hidden font-display text-6xl leading-none font-semibold text-gold/15 select-none sm:block sm:text-7xl"
                   aria-hidden="true"
                 >
                   {step.number}
