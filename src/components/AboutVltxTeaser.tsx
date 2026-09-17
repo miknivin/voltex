@@ -16,7 +16,7 @@ const PILLARS = [
 
 export default function AboutVltxTeaser() {
   return (
-    <section className="relative z-0 overflow-hidden bg-bg-band py-20 text-white lg:py-28">
+    <section id="about-vltx" className="relative z-0 overflow-hidden bg-bg-band py-20 text-white lg:py-28">
       <Image
         src={sectionVector}
         alt=""

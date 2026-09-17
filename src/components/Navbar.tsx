@@ -11,10 +11,10 @@ const LINKS = [
   { label: "What We Value", href: "/#assets" },
   { label: "How It Works", href: "/#process" },
   { label: "Why VLTX", href: "/#why-vltx" },
-  { label: "About VLTX", href: "/about" },
+  { label: "About VLTX", href: "/#about-vltx" },
   { label: "Leadership", href: "/#leadership" },
   { label: "FAQ", href: "/#faq" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
 function ArrowDownRightIcon({ className = "" }: { className?: string }) {
@@ -67,7 +67,7 @@ export default function Navbar() {
         </nav>
 
         <Link
-          href="/#contact"
+          href="/contact"
           className="hidden items-center gap-2 border-b border-gold pb-1 text-xs font-semibold tracking-[1.4px] text-gold-deep uppercase transition-colors hover:text-text-primary xl:inline-flex"
         >
           Get a Valuation
@@ -111,7 +111,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="/#contact"
+            href="/contact"
             onClick={() => setOpen(false)}
             className="mt-2 flex items-center justify-between rounded-lg bg-gold px-4 py-3 text-sm font-semibold tracking-[1.4px] text-[#3c2f00] uppercase"
           >
