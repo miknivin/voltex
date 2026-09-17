@@ -51,36 +51,38 @@ export default function HowItWorks() {
             <span className="text-gold-deep">Works</span>
           </h2>
           <p className="mt-7 max-w-md text-base leading-6 text-text-muted">
-            A simple, professionally managed journey from first conversation
-            to secure completion.
+            A simple, professionally managed journey from first conversation to
+            secure completion.
           </p>
         </div>
 
-        <ol className="relative border-l border-gold/40 pt-6 pl-8 sm:pl-12">
+        <ol className="relative border-l border-gold/40 pl-8 sm:pl-12">
           {STEPS.map((step) => (
             <li key={step.number} className="relative pb-10 last:pb-0">
               <span
-                className="absolute -left-[2.3rem] top-1 grid size-6 place-items-center rounded-full border border-gold bg-bg sm:-left-[3.3rem]"
+                className="absolute -left-11 top-1 grid size-6 place-items-center rounded-full border border-gold bg-bg sm:-left-15"
                 aria-hidden="true"
               >
                 <span className="size-1.5 rotate-45 bg-gold" />
               </span>
-              <div className="relative">
+              <div className="flex items-start justify-between gap-6">
+                <div>
+                  <p className="text-xs font-bold tracking-[2px] text-gold-deep">
+                    {step.number}
+                  </p>
+                  <h3 className="mt-2 font-display text-lg font-semibold text-text-primary sm:text-xl">
+                    {step.title}
+                  </h3>
+                  <p className="mt-2 max-w-lg text-sm leading-6 text-text-muted">
+                    {step.description}
+                  </p>
+                </div>
                 <span
-                  className="pointer-events-none absolute -top-6 right-0 hidden font-display text-6xl font-semibold text-gold/15 select-none sm:block sm:text-7xl"
+                  className="pointer-events-none hidden shrink-0 font-display text-6xl leading-none font-semibold text-gold/15 select-none sm:block sm:text-7xl"
                   aria-hidden="true"
                 >
                   {step.number}
                 </span>
-                <p className="text-xs font-bold tracking-[2px] text-gold-deep">
-                  {step.number}
-                </p>
-                <h3 className="mt-2 font-display text-lg font-semibold text-text-primary sm:text-xl">
-                  {step.title}
-                </h3>
-                <p className="mt-2 max-w-lg text-sm leading-6 text-text-muted">
-                  {step.description}
-                </p>
               </div>
             </li>
           ))}
