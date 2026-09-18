@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import heroImage from "../../public/images/emerald-theme/Hero.jpg";
+import heroImage from "../../public/images/hero-section-image.webp";
 import heroContentSide from "../../public/images/hero-content-side.png";
 
 const CHIPS = ["Platinum", "Diamonds", "Precious Gem Stones & Jewellery", "Luxury Watches"];
@@ -66,16 +66,12 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="relative z-10 mx-auto w-full max-w-xl lg:max-w-none">
-            <div
-              className="pointer-events-none absolute -inset-3 border border-gold/40"
-              aria-hidden
-            />
+          <div className="relative z-10 mx-auto w-full max-w-md lg:max-w-lg">
             <Image
               src={heroImage}
-              alt="Platinum rings, diamond pendant, gemstone jewellery and a luxury watch on a steel surface"
+              alt="A curated arrangement of certified diamonds"
               priority
-              className="relative aspect-5/4 w-full border-2 border-line object-cover"
+              className="relative h-auto w-full object-contain"
             />
           </div>
         </div>

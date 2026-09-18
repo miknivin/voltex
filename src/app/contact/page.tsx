@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
-import ContactForm from "@/components/ContactForm";
+import ValuationForm from "@/components/ValuationForm";
 import ContactInfo from "@/components/ContactInfo";
 import Footer from "@/components/Footer";
 import sectionVector from "../../../public/images/section-vector.png";
@@ -47,7 +47,7 @@ export default function ContactPage() {
                 </p>
               </div>
 
-              <ContactForm />
+              <ValuationForm />
             </div>
           </div>
         </section>
