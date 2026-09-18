@@ -32,21 +32,17 @@ export default function ContactPage() {
             className="pointer-events-none absolute -top-16 right-0 -z-10 w-325 max-w-none opacity-70 select-none lg:w-[1600px]"
           />
 
-          <div className="mx-auto max-w-7xl px-6 lg:px-10">
-            <div className="grid grid-cols-1 gap-12 lg:grid-cols-[2fr_3fr] lg:gap-16">
-              <div className="lg:pt-16">
-                <h1 className="section-title text-text-primary">
-                  Private
-                  <br />
-                  <span className="text-gold-deep">Consultation.</span>
-                </h1>
-                <p className="mt-7 max-w-sm text-base leading-6 text-text-muted">
-                  Submit initial details for your portfolio valuation or
-                  liquidity inquiry. All submissions are processed through
-                  our secure, encrypted institutional gateway.
-                </p>
-              </div>
+          <div className="mx-auto max-w-2xl px-6 text-center lg:px-10">
+            <h1 className="section-title text-text-primary">
+              Private <span className="text-gold-deep">Consultation.</span>
+            </h1>
+            <p className="mx-auto mt-7 max-w-lg text-base leading-6 text-text-muted">
+              Submit initial details for your portfolio valuation or
+              liquidity inquiry. All submissions are processed through our
+              secure, encrypted institutional gateway.
+            </p>
 
+            <div className="mt-12 text-left">
               <ValuationForm />
             </div>
           </div>

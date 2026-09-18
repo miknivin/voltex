@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState, type ChangeEvent, type FormEvent } from "react";
 
 const CATEGORIES = [
@@ -77,6 +78,20 @@ function CategoryIcon({ category, className }: { category: Category; className?:
   return (
     <svg {...common}>
       <path d="M16 4l2.4 7.6L26 14l-7.6 2.4L16 24l-2.4-7.6L6 14l7.6-2.4L16 4z" stroke="currentColor" strokeWidth="1.4" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function ArrowLeftIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
+      <path
+        d="M19 12H5m0 0l6-6m-6 6l6 6"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
@@ -204,9 +219,29 @@ export default function ValuationForm() {
 
   return (
     <div className="rounded-2xl border border-line bg-card p-6 sm:p-10">
-      <p className="text-xs font-bold tracking-[3px] text-gold-deep uppercase">
-        Get a Valuation
-      </p>
+      <div className="flex items-center justify-between gap-4">
+        <p className="text-xs font-bold tracking-[3px] text-gold-deep uppercase">
+          Get a Valuation
+        </p>
+        {step === 0 ? (
+          <Link
+            href="/"
+            className="flex items-center gap-1.5 text-xs font-bold tracking-[1px] text-text-muted uppercase transition-colors hover:text-text-primary"
+          >
+            <ArrowLeftIcon className="size-3.5" />
+            Back to Home
+          </Link>
+        ) : (
+          <button
+            type="button"
+            onClick={goBack}
+            className="flex items-center gap-1.5 text-xs font-bold tracking-[1px] text-text-muted uppercase transition-colors hover:text-text-primary"
+          >
+            <ArrowLeftIcon className="size-3.5" />
+            Back
+          </button>
+        )}
+      </div>
 
       <ol className="mt-6 flex items-center gap-2 sm:gap-3">
         {STEPS.map((label, i) => (
