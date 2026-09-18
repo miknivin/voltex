@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import heroImage from "../../public/images/hero-section-image.webp";
 import heroContentSide from "../../public/images/hero-content-side.png";
+import sectionVector from "../../public/images/section-vector.png";
 
 const CHIPS = ["Platinum", "Diamonds", "Precious Gem Stones & Jewellery", "Luxury Watches"];
 
@@ -67,6 +68,12 @@ export default function Hero() {
           </div>
 
           <div className="relative z-10 mx-auto w-full max-w-md lg:max-w-lg">
+            <Image
+              src={sectionVector}
+              alt=""
+              aria-hidden
+              className="pointer-events-none absolute top-1/2 left-1/2 -z-10 w-350 max-w-none -translate-x-1/2 -translate-y-1/2 rotate-6 opacity-100 select-none lg:w-425"
+            />
             <Image
               src={heroImage}
               alt="A curated arrangement of certified diamonds"
