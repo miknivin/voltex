@@ -256,10 +256,10 @@ export default function ValuationForm() {
                     key={category}
                     type="button"
                     onClick={() => update("category", category)}
-                    className={`flex flex-col items-center gap-3 rounded-lg border p-4 text-center transition-colors ${
+                    className={`flex flex-col items-center gap-3 rounded-lg border p-4 text-center shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] backdrop-blur-md transition-all ${
                       active
-                        ? "border-gold bg-line-soft"
-                        : "border-line hover:border-gold/40"
+                        ? "border-gold bg-gold/10 shadow-[0_0_24px_-6px_rgba(242,202,80,0.45),inset_0_1px_0_0_rgba(255,255,255,0.1)]"
+                        : "border-line bg-white/[0.03] hover:border-gold/40 hover:bg-white/[0.06]"
                     }`}
                   >
                     <CategoryIcon
