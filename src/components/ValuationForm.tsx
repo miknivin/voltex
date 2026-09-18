@@ -2,6 +2,9 @@
 
 import Link from "next/link";
 import { useState, type ChangeEvent, type FormEvent } from "react";
+import Lightbox from "yet-another-react-lightbox";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import "yet-another-react-lightbox/styles.css";
 
 const CATEGORIES = [
   "Platinum Metal",
@@ -139,6 +142,7 @@ export default function ValuationForm() {
   const [certificateFile, setCertificateFile] = useState<File | null>(null);
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const fields = form.category ? CATEGORY_FIELDS[form.category] : null;
 
@@ -462,14 +466,21 @@ export default function ValuationForm() {
               {photos.length > 0 && (
                 <div className="mt-4 grid grid-cols-3 gap-3 sm:grid-cols-4">
                   {photos.map((p, i) => (
-                    <div key={p.url} className="group relative aspect-square overflow-hidden rounded-sm border border-line">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={p.url} alt="" className="h-full w-full object-cover" />
+                    <div key={p.url} className="group relative aspect-square overflow-visible rounded-sm border border-line">
+                      <button
+                        type="button"
+                        onClick={() => setLightboxIndex(i)}
+                        aria-label="View photo"
+                        className="block h-full w-full overflow-hidden rounded-sm"
+                      >
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={p.url} alt="" className="h-full w-full object-cover transition-transform group-hover:scale-105" />
+                      </button>
                       <button
                         type="button"
                         onClick={() => removePhoto(i)}
                         aria-label="Remove photo"
-                        className="absolute top-1 right-1 flex size-5 items-center justify-center rounded-full bg-black/70 text-white opacity-0 transition-opacity group-hover:opacity-100"
+                        className="absolute -top-2 -right-2 flex size-5 items-center justify-center rounded-full border border-line bg-bg text-text-primary shadow-md transition-colors hover:border-gold hover:text-gold-deep"
                       >
                         <svg viewBox="0 0 24 24" fill="none" className="size-3">
                           <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
@@ -479,6 +490,15 @@ export default function ValuationForm() {
                   ))}
                 </div>
               )}
+
+              <Lightbox
+                open={lightboxIndex !== null}
+                close={() => setLightboxIndex(null)}
+                index={lightboxIndex ?? 0}
+                slides={photos.map((p) => ({ src: p.url }))}
+                plugins={[Zoom]}
+                zoom={{ maxZoomPixelRatio: 3 }}
+              />
             </div>
 
             <div className="mt-6 flex flex-col gap-2">
