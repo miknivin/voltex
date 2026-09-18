@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay, EffectFade, Pagination } from "swiper/modules";
 import "swiper/css";
+import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import img1 from "../../public/images/hero-section-images/1.webp";
 import img2 from "../../public/images/hero-section-images/2.webp";
@@ -22,7 +23,9 @@ const SLIDES = [
 export default function HeroImageSlider() {
   return (
     <Swiper
-      modules={[Autoplay, Pagination]}
+      modules={[Autoplay, EffectFade, Pagination]}
+      effect="fade"
+      fadeEffect={{ crossFade: true }}
       autoplay={{ delay: 3000, disableOnInteraction: false }}
       pagination={{ clickable: true }}
       loop
