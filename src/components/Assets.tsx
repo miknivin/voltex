@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import platinumImg from "../../public/images/emerald-theme/Platinum.jpg";
 import diamondImg from "../../public/images/emerald-theme/Certified Diamonds & Diamond Jewellery.jpg";
 import gemstoneImg from "../../public/images/emerald-theme/Precious Gem Stones & Jewellery.jpg";
@@ -11,25 +10,21 @@ const CATEGORIES = [
     image: platinumImg,
     name: "Platinum",
     description: "Platinum bars & coins, platinum jewellery",
-    href: "/platinum-jewellery",
   },
   {
     image: diamondImg,
     name: "Certified Diamonds & Diamond Jewellery",
     description: "Certified loose diamonds and finished diamond jewellery",
-    href: "/diamonds",
   },
   {
     image: gemstoneImg,
     name: "Precious Gem Stones & Jewellery",
     description: "Emeralds, rubies, sapphires and fine jewellery",
-    href: "/precious-gemstones",
   },
   {
     image: watchImg,
     name: "Luxury Watches",
     description: "Exceptional timepieces from leading luxury houses",
-    href: "/luxury-watches",
   },
 ];
 
@@ -59,9 +54,8 @@ export default function WhatWeValue() {
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {CATEGORIES.map((category) => (
-            <Link
+            <div
               key={category.name}
-              href={category.href}
               className="group relative flex h-full flex-col overflow-hidden rounded-lg border border-line bg-bg"
             >
               <div className="sheen relative aspect-3/4 overflow-hidden border-b border-line">
@@ -100,7 +94,7 @@ export default function WhatWeValue() {
                   </svg>
                 </span>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </div>

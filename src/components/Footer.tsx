@@ -14,11 +14,11 @@ const COMPANY_LINKS = [
   { label: "Contact", href: "/contact" },
 ];
 
-const CATEGORY_LINKS = [
-  { label: "Platinum", href: "/platinum-jewellery" },
-  { label: "Certified Diamonds & Diamond Jewellery", href: "/diamonds" },
-  { label: "Precious Gem Stones & Jewellery", href: "/precious-gemstones" },
-  { label: "Luxury Watches", href: "/luxury-watches" },
+const CATEGORIES = [
+  "Platinum",
+  "Certified Diamonds & Diamond Jewellery",
+  "Precious Gem Stones & Jewellery",
+  "Luxury Watches",
 ];
 
 export default function Footer() {
@@ -74,14 +74,10 @@ export default function Footer() {
               <p className="mb-4 text-[11px] font-bold tracking-[2px] text-gold-deep uppercase">
                 Categories
               </p>
-              {CATEGORY_LINKS.map((link) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  className="block w-fit py-1.5 text-sm text-text-muted transition-colors hover:text-text-primary"
-                >
-                  {link.label}
-                </Link>
+              {CATEGORIES.map((label) => (
+                <span key={label} className="block py-1.5 text-sm text-text-muted">
+                  {label}
+                </span>
               ))}
             </div>
           </div>
