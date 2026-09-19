@@ -77,22 +77,6 @@ export default function WhatWeValue() {
                 <p className="mt-2 text-sm leading-6 text-text-muted">
                   {category.description}
                 </p>
-                <span className="mt-5 inline-flex w-fit items-center gap-2 text-[11px] font-semibold tracking-[1.6px] text-gold-deep uppercase">
-                  Ask about this
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1"
-                  >
-                    <path
-                      d="M5 12h13m0 0-5-5m5 5-5 5"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </span>
               </div>
             </div>
           ))}
