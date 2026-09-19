@@ -9,7 +9,11 @@ const CARDS = [
   {
     icon: officeIcon,
     title: "Head Office",
-    lines: ["Level 42, The Leadenhall", "Building", "122 Leadenhall St, London"],
+    lines: [
+      "2nd Floor, 35/1078/46 & 47",
+      "Holy Space Commercial Complex, Church Circle",
+      "Thrissur, Kerala 680001",
+    ],
   },
   {
     icon: phoneIcon,
